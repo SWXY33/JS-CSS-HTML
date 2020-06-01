@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    id="WebApp_ID" version="2.5">
+ 
+    <!-- 配置DispatchcerServlet -->
+    <servlet>
+        <servlet-name>springDispatcherServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!-- 配置Spring mvc下的配置文件的位置和名称 -->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/springmvc.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>springDispatcherServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+ 
+</web-app>
+
+<!-- 注意：
+A、 line12-15用于配置spring mvc的配置文件的位置和名称，这里说明会新建一个springmvc.xml的配置文件
+
+B、 我们也可以不新建springmvc.xml，而是用默认的，默认的配置文件格式为/WEB-INF/[servlet-name]-servlet.xml，对应这里的就是springDispatcherServlet-servlet.xml
+
+C、这里的servlet-mapping表示拦截的模式，这里是“/”，表示对于所有的请求的拦截，包括静态资源如html, js, jpg等。这时候对于静态资源的访问就会报404的错误。 
+-->
