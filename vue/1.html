@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vue嵌套循环</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+		
+        <ul>
+            <!-- 先从origin获得对应的数据 -->
+            <li v-for="(value,key) in origin">
+            {{value.info}}
+                <!-- 在根据从origin获得的数据遍历对应的对象 -->
+                <ul>
+                    <li v-for="(item,key,index) in value.project">
+                        {{index}}----{{key}}----{{item}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    origin:[
+                 {
+                    info:"1",
+                    "project":{
+						"name":"a",
+						"age":"18",
+						"birthday":"2002"},
+                 },
+                 {
+                    info:"2",
+                    "project":{
+						"name":"b",
+						"age":"19",
+						"birthda":"2001"},
+                 },
+                 {
+                    info:"3",
+                    "project":{
+						"name":"c",
+						"age":"20",
+						"birthda":"2000"},
+                 }
+                ]
+
+                }
+            })
+        </script>
+</body>
+
+</html>
