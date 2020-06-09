@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <title>js数组获取相同元素个数，归档排序</title>
+</head>
+ 
+<body>
+	<div>['2017年6月', '2017年6月', '2017年6月', '2017年5月', '2017年5月', '2017年7月', '2017年7月']</div>
+	<div id="result">请按F12查看查询结果（js数组获取相同元素个数，归档排序）</div>
+	<br>
+	
+	<div>arr = ["apple","orange","apple","orange","pear","orange","yellow"]</div>
+	<button onclick="get()">统计数组相同元素个数</button>
+	<div id="get"></div>
+  <script>
+  var arr = [];
+  var result = ['2017年6月', '2017年6月', '2017年6月', '2017年5月', '2017年5月', '2017年7月', '2017年7月']
+  result.sort()
+  for (var i = 0; i < result.length;) {
+    var count = 0;
+    for (var j = i; j < result.length; j++) {
+      if (result[i] === result[j]) {
+        count++;
+      }
+    }
+    arr.push({
+      date: result[i],
+      count: count
+    })
+    i+=count;
+	
+  }
+ 
+  for (var k = 0; k < arr.length; k++) {
+    console.log(arr[k])
+	
+  }
+  
+  function  statisticalFieldNumber(arr) {
+              return arr.reduce(function (prev, next) {
+                  prev[next] = (prev[next] + 1) || 1;
+				  //重点难点解析：prev[next] = (prev[next] + 1) || 1;
+				  //prev: prev是对象 (也就是object)，初始化prev为{}, 也就是倒数第二行的声明；
+				  //next指 one of the array elements，也就是说，当reduce遍历到arr的[“apple”,“orange”]时，prev = { apple: 1 }，这时候，
+				  //prev={"apple":1;"orange":1;}
+				  //"orange"还没有，说明prev[next] 为false, 所以取 || 右边的值1，这时候prev就变成了
+				  //prev={"apple":1;"orange":1;}
+                  return prev;
+              }, {});
+          }
+       var  arr = ["apple","orange","apple","orange","pear","orange","yellow"];
+	   var arr1=[];
+	   arr1.push(statisticalFieldNumber(arr));
+      console.log(statisticalFieldNumber(arr));
+	  console.log(arr1[0].apple);
+function get(){
+	document.getElementById("get").innerHTML="[apple : "+arr1[0].apple+" , orange : "+arr1[0].orange+" , pear : "+arr1[0].pear+" , yellow : "+arr1[0].yellow+" ]";
+}
+  </script>
+</body>
+ 
+</html>
