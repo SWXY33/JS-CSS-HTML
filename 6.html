@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>1.json类型的字符串转换为json对象及取值:<br></h1>
+				<h2>var jsonString = '{"bar":"property","baz":3}';<br>
+				var jsObject = JSON.parse(jsonString);    //转换为json对象<br>
+				alert(jsObject.bar);    //取json中的值</h2>
+				<h1>2.json对象转为json类型的字符串:<br></h1>
+				<h2>var jsonString = '{"bar":"property","baz":3}';<br>
+				var jsObject = JSON.parse(jsonString); //转换为json对象<br>
+				alert(jsObject.bar); //取json中的值<br>
+				var st = JSON.stringify(jsObject); //转换为json类型的字符串</h2>
+				<h1>3.json数组类型的字符串转换为json及取值 和json对象转换为转换为json字符串:</h1>
+				<h2>//json数组类型字符串取值<br>
+				var jsonStr = '[{"id":"01","open":false,"pId":"0","name":"A部门"},{"id":"01","open":false,"pId":"0","name":"A部门"},{"id":"011","open":false,"pId":"01","name":"A部门"},{"id":"03","open":false,"pId":"0","name":"A部门"},{"id":"04","open":false,"pId":"0","name":"A部门"}, {"id":"05","open":false,"pId":"0","name":"A部门"}, {"id":"06","open":false,"pId":"0","name":"A部门"}]';<br>
+				var jsonObj =  JSON.parse(jsonStr);//转换为json对象<br>
+				<textarea style="font-size: 30px;width: 1500px;height: 250px;font: bold;">for(var i=0;i<jsonObj.length;i++){
+		        alert(jsonObj[i].id);  //取json中的值
+		}
+		console.log(jsonObj)
+		var jsonStr1 = JSON.stringify(jsonObj)
+		console.log(jsonStr1+"jsonStr1")</textarea></h2>
+		<h3>一、利用原生JSON对象，将对象转为字符串</h3>
+		<div>var jsObj = {};</div>
+		<div>jsObj.testArray = [1,2,3,4,5];</div>
+		<div>jsObj.name = 'CSS3';</div>
+		<div>jsObj.date = '8 May, 2011';</div>
+		<div>var str = JSON.stringify(jsObj);</div>
+		<div>document.getElementById("result1").innerHTML="转化成字符串："+str;</div><br>
+		<button onclick="test1()">点击运行</button>
+		<div id="result1"></div><br>
+		<br>
+		<h3>二、将JSON字符串转为对象</h3>
+		<div>var jsObj = {};</div>
+		<div>jsObj.testArray = [1,2,3,4,5];</div>
+		<div>jsObj.name = 'CSS3';</div>
+		<div>jsObj.date = '8 May, 2011';</div>
+		<div>var str = JSON.stringify(jsObj);</div>
+		<div>var str1 = JSON.parse(str);</div>
+		<div>console.log(str1);</div><br>
+		<button onclick="test2()">点击运行</button>
+		<div id="result2"></div><br>
+		<h3>三、将JSON字符串转为数组</h3>
+		<div>var str="星期日,星期一,星期二,星期三,星期四,星期五,星期六";</div>
+		<div>var today=new Date();</div>
+		<div>var week=today.getDay();</div>
+		<div>var arr=str.split(",");</div>
+		<div>document.getElementById("result3").innerHTML="数组是：arr=["+arr+"],arr类型是："+typeof(arr)+"，数组的第一个元素是："+arr[0];</div>
+		<div>document.getElementById("result4").innerHTML="今天是："+arr[week];</div><br>
+		<button onclick="test3()">点击运行</button>
+		<div id="result3"></div>
+		<div id="result4"></div><br>
+		<h3>四、数组转换为字符串</h3>
+		<h4>1.Array对象的join()方法:将一个数组转成字符串。如：arrObj.join(连接号)，将一个数组用指定的连接号链接成一个字符串。</h4>
+		<div>var arr=["a","b","c"];</div>
+		<div>var str=arr.join("-");</div>
+		<div>document.getElementById("result5").innerHTML="arr数组转化为字符串后："+str+"str的类型是："+typeof(str);</div><br>
+		<button onclick="test4()">点击运行</button>
+		<div id="result5"></div>
+		<h4>2.Array对象的reverse()方法：将数组中各元素颠倒顺序。如：arrObj.reverse()。</h4>
+		<div>var arr=["a","b","c"];</div>
+		<div>arr.reverse();</div>
+		<div>document.getElementById("result6").innerHTML="arr数组转化为字符串：str="+arr;</div><br>
+		<button onclick="test5()">点击运行</button>
+		<div id="result6"></div><br>
+		<h3>五、对象转换为数组</h3>
+		<div>var scoreObject = {</div>
+		<div>   "Tony": {</div>
+		<div>      "Math": 95,</div>
+		<div>       "English": 79,</div>
+		<div>        "Music": 68</div>
+		<div>   }, </div>
+		<div>    "Simon": {</div>
+		<div>        "Math": 100,</div>
+		<div>        "English": 95,</div>
+		<div>        "Music": 98</div>
+		<div>    }, </div>
+		<div>    "Annie": {</div>
+		<div>        "Math": 54,</div>
+		<div>        "English": 65,</div>
+		<div>        "Music": 88</div>
+		<div>    }</div>
+		<div>}</div>
+		<div>转成格式为：</div>
+		<div>var scoreArray = [</div>
+		<div>    ["Tony", 95, 79, 68],</div>
+		<div>    ……</div>
+		<div>];</div>
+		<div>var arr6=[];</div>
+		<div>for(var i in scoreObject){ //第一次使用这种for循环，这里i并不是i=1,i=2,i=3....这种数字，而是i=Tony，i=Simon，i=Annie</div>
+		<div>    var arr7=[];</div>
+		<div>    arr7.push(i);</div>
+		<div>    for(var j in scoreObject[i]){ //同理这里的for循环里的 j 也不是 1,2,3.。。</div>
+		<div>       arr7.push(scoreObject[i][j]);</div>
+		<div>    }</div>
+		<div>    arr6.push(arr7);</div>
+		<div>}</div>
+		<div>console.log(arr6);</div><br>
+		<button onclick="test6()">点击运行</button>
+		<div id="result7"></div><br>
+		<H3>六、数组转化为对象</H3>
+		
+		<script>
+			function test1(){
+				var jsObj = {};
+				jsObj.testArray = [1,2,3,4,5];
+				jsObj.name = 'CSS3';
+				jsObj.date = '8 May, 2011';
+				var str = JSON.stringify(jsObj);
+				document.getElementById("result1").innerHTML="转化成字符串："+str;
+			}
+			function test2(){
+				var jsObj = {};
+				jsObj.testArray = [1,2,3,4,5];
+				jsObj.name = 'CSS3';
+				jsObj.date = '8 May, 2011';
+				var str = JSON.stringify(jsObj);
+				var str1 = JSON.parse(str);
+				console.log(str1);
+				document.getElementById("result2").innerHTML="按F12查看结果。";
+			}
+			function test3(){
+				var str="星期日,星期一,星期二,星期三,星期四,星期五,星期六";
+				//创建一个日期对象
+				var today=new Date();
+				//使用today对象的getDay()方法
+				var week=today.getDay();
+				//将星期字符串分割成一个数组
+				var arr=str.split(",");
+				document.getElementById("result3").innerHTML="数组是：arr=["+arr+"],arr类型是："+typeof(arr)+"，数组的第一个元素是："+arr[0];
+				document.getElementById("result4").innerHTML="今天是："+arr[week];
+			}
+			function test4(){
+				var arr=["a","b","c"];
+				var str=arr.join("-");
+				document.getElementById("result5").innerHTML="arr数组转化为字符串：str="+str+"，str的类型是："+typeof(str);
+			}
+			function test5(){
+				var arr=["a","b","c"];
+				arr.reverse();
+				document.getElementById("result6").innerHTML="arr数组转化为字符串：str="+arr;
+			}
+			
+			function test6(){
+				var scoreObject = {
+				    "Tony": {
+				        "Math": 95,
+				        "English": 79,
+				        "Music": 68
+				    }, 
+				    "Simon": {
+				        "Math": 100,
+				        "English": 95,
+				        "Music": 98
+				    }, 
+				    "Annie": {
+				        "Math": 54,
+				        "English": 65,
+				        "Music": 88
+				    }
+				}
+				var arr6=[];
+				for(var i in scoreObject){ //第一次使用这种for循环，这里i并不是i=1,i=2,i=3....这种数字，而是i=Tony，i=Simon，i=Annie
+				    var arr7=[];
+				    arr7.push(i);
+				    for(var j in scoreObject[i]){ //同理这里的for循环里的 j 也不是 1,2,3.。。
+				        arr7.push(scoreObject[i][j]);
+				    }
+				    arr6.push(arr7);
+				}
+				document.getElementById("result7").innerHTML="对象转化为数组arr=["+arr6+"]";
+			}
+		</script>
+	</body>
+</html>
