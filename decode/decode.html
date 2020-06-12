@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>破解密码方法</title>
+		<link rel="stylesheet" type="text/css" href="decode.css" />
+		<script src="jquery-3.4.1.min.js"></script>
+		<script src="decode.js"></script>
+		<script> 
+		//获取浏览器窗口的内部宽高 - IE9+、chrome、firefox、Opera、Safari：
+			var w = window.innerWidth;
+            var h = window.innerHeight;
+			console.log("网页可见区域宽："+w+"；网页可见区域高："+h);
+			$("#screen").css("width",w);
+		</script>
+		
+	</head>
+	<body>
+		<div class="container" id="container">
+			<div class="screen" id="screen">
+			<div>
+			<button id="one" onclick="getClickNum(this.id)">1</button>
+			<button id="two" onclick="getClickNum(this.id)">2</button>
+			<button id="three" onclick="getClickNum(this.id)">3</button>
+			</div>
+			<div>
+			<button id="four" onclick="getClickNum(this.id)">4</button>
+			<button id="five" onclick="getClickNum(this.id)">5</button>
+			<button id="six" onclick="getClickNum(this.id)">6</button>
+			</div>
+			<div>
+			<button id="seven" onclick="getClickNum(this.id)">7</button>
+			<button id="eight" onclick="getClickNum(this.id)">8</button>
+			<button id="nine" onclick="getClickNum(this.id)">9</button>
+			</div>
+			<button id="zero" onclick="getClickNum(this.id)">0</button>
+			</div>	
+			<div id="bottom">
+			<input class="setPassword" id="setPassword" type="button" onclick="getClickNum(this.id)" value="设置密码"/>	
+			<input class="decodePassword" id="decodePassword" type="button" onclick="decodePassword()" value="破解密码"/>
+			</div>
+		<div>
+		
+		
+		</div>
+		</div>
+		
+		
+	</body>
+</html>

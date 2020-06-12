@@ -1,0 +1,46 @@
+body{text-align:center;
+}
+*{
+	font-weight: bold;
+}
+.container{
+	width: auto;
+	height: 500px;
+	border: 1px solid #CCC6C6;
+}
+.screen{
+	margin:0 auto;
+	height: 400px;
+	border: 1px solid #ff5500;
+}
+button{
+	cursor: pointer;/*鼠标变成手指样式*/
+	/* font-size: 30px; */
+	width: 15%;
+	height:100px;
+}
+.setPassword{
+	margin-left: 30%;
+	margin-top: 30px;
+	cursor: pointer;/*鼠标变成手指样式*/
+	/* font-size: 30px; */
+	width: 15%;
+	height:70px;
+    float: left;
+	background-color: #00aaff;
+}
+.decodePassword{
+	margin-right: 30%;
+	margin-top: 30px;
+	cursor: pointer;/*鼠标变成手指样式*/
+/* 	font-size: 30px; */
+	width: 15%;
+	height:70px;
+    float: right;
+	background-color: #00aa00;
+}
+.success{
+/* 	font-size: 40px; */
+	color: #C00;
+	line-height: 300px;
+}
