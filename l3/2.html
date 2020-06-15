@@ -1,0 +1,176 @@
+<!DOCTYPE html >
+<html>
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<img id="loading" src="themes/default/images/loading.gif" style="position:absolute;top:50%;left:50%;margin-top:-47px;margin-left:-73px;">
+<title>帮管客CRM客户管理系统</title>
+<head>
+<link rel="stylesheet" type="text/css" href="themes/default/css/index.css" />
+<link rel="stylesheet" type="text/css" href="themes/default/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="themes/windows/css/main_new.css" />
+<link rel="stylesheet" type="text/css" href="themes/layui/css/layui.css" />
+<script type="text/javascript" src="themes/default/js/jquery-1.11.2.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="themes/default/js/jquery.artDialog.js?skin=default"></script>
+<script type="text/javascript" src="themes/default/js/index.js?v=1.0" charset="utf-8"></script>
+<script type="text/javascript" src="themes/layui/layer.js" charset="utf-8"></script>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="themes/default/css/llq.css" />
+
+<SCRIPT>
+$(function(){
+if (!$.support.leadingWhitespace) {
+	$("#browser_ie").show();
+	$(".logo_box").hide();
+}
+})
+</SCRIPT><!--全局菜单--> 
+<a class="btn-paograms" href="javascript:;" onClick="togglePopMenu();"> <i class="iconfont icon-list-fill"></i> </a>
+<div id="pop-menu" class="pop-menu">
+  <div class="pop-box">
+    <h1 class="title"><i class="iconfont icon-setting"></i>导航菜单</h1>
+    <i class="close iconfont icon-remove" onClick="togglePopMenu();"></i>
+    <div class="list-box"></div>
+  </div>
+</div>
+<!--/全局菜单-->
+
+<div class="main-top"> <a class="icon-menu"><i class="fa fa-reorder"></i></a>
+  <div id="main-nav" class="main-nav"></div>
+  <div class="nav-right">
+
+
+
+<div class="nav_top changefg" title="锁屏"> <a id="desk_lock_btn"><i class="fa fa-unlock-alt"></i> 锁屏</a></div>
+
+<div class="nav_top changefg" title="切换风格"> <a id="changefg"><i class="fa fa-exchange"></i> 风格</a></div>
+
+<div class="nav_top changefg" title="待办"> <a id="todolist_btn"><i class="fa fa-list-ul"></i> 待办</a></div>
+
+<div class="nav_top taskbar-msg" title="内部消息提醒"> <a href="/index.php/message" target="mainiframe"><i class="fa fa-envelope-o icon-task-i on-new-msg"></i> <span id="msg_nums">0</span></a> <div id="msg_tips"></div> </div>
+
+    <div class="info">
+
+      <h4> <img class="avatar" src="/themes/default/images/avatar.png"> </h4>
+      <span> admin<br />
+      超级管理员 </span> </div>
+    <div class="option"> <i class="fa fa-chevron-down"></i>
+      <div class="drop-wrap">
+        <ul class="item">
+          <li> <a href="/index.php/home/work" target="mainiframe">控制台</a> </li>
+          <li> <a href="/index.php/user/info" target="mainiframe">修改密码</a> </li>
+          <li> <a class="logout">注销登录</a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-left">
+  <h1 class="logo"></h1>
+  <div id="sidebar-nav" class="sidebar-nav"></div>
+</div>
+<div class="main-container">
+  <iframe id="mainiframe" name="mainiframe" frameborder="0" src="/index.php/home/work"></iframe>
+</div>
+
+
+
+<div class="desk_todolist layui-form ">
+  <h1>待办事项</h1>
+  <ul class="mainlist">
+  </ul>
+  <div style="text-align:right; padding:5px 0;"> 已完成项目移动到最后？
+    <input id="switch" type="checkbox" name="done_last" lay-skin="switch" lay-filter="tolast" checked>
+  </div>
+  <div class="todobox">
+    <textarea class="todo" name="todotext" id="todotext"></textarea>
+    <a class="todobtn" id="todobtn">添加</a> </div>
+</div>
+
+<div class="lock_desktop" >
+<div class="unlock">
+<input id="unlock_pwd" name="unlock_pwd" type="password" placeholder="登录密码" />
+<button id="unlock_btn">解 锁</button>
+</div>
+</div>
+
+
+<style>
+.desk_todolist{ background:#0b89b3; top:55px; right:5px; display:none;}
+</style>
+
+<script src="themes/layui/layui.js"></script>
+
+<script src="themes/websocket/web_socket.js"></script>
+<script>
+var offset_top = ($(window).height()-62);
+layui.config({base: '/themes/chat/',}).use(['laychat'], function() {
+	var laychat = layui.laychat;
+});
+</script>
+
+
+<script src="themes/windows/js/callrecord.js"></script>
+<script src="themes/windows/js/desktop.js"></script> 
+<script src="themes/windows/js/msg.js"></script> 
+<script>
+// 设置初始值
+var list = [ ]</script> 
+<script src="/themes/windows/js/todolist.js"></script>
+
+<script>
+
+$("#todolist_btn").on("click", function() {
+	$(".desk_todolist").slideToggle();
+});
+
+$("#changefg").on("click", function() {
+	layer.alert("是否要切换系统风格?", {
+		icon: 0,
+		zIndex:10000001,
+		btn: ["确定", "取消"],
+		yes: function(index, layero) {
+			$.post("/index.php/home/theme_change", {}, function(data) {
+				if (data.code=='1') {
+					layer.msg(data.msg,{zIndex:10000001,anim:1,maxWidth:500,icon:1,time:1000,end:function(){window.location.reload();}});
+				} else {
+					layer.msg("操作失败")
+				}
+			},'json')
+		},
+		end: function() {}
+	})
+});
+
+//客户保护期刷新
+setTimeout(tb1(),10000)
+function tb1(){
+	 $.ajax({
+		 url:"/index.php/baohuqi/shuaxin",
+		 data:{},
+		 dataType:'json',
+		 async:true, 
+		 type:'get',
+		 success:function(data){
+		 if(data.code=="101"){tb1()}
+		 }
+	     });
+}
+setTimeout(tb2(),13000)
+function tb2(){
+	 $.ajax({
+		 url:"/index.php/baohuqi/tixing",
+		 data:{},
+		 dataType:'json',
+		 async:true, 
+		 type:'get',
+		 success:function(data){
+		 if(data.code=="101"){tb2()}
+		 }
+	     });
+}
+
+</script>
+
+</body>
+</html>

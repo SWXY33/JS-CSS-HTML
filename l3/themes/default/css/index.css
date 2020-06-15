@@ -1,0 +1,159 @@
+@charset "utf-8";
+/* CSS Document */
+*{ padding:0; margin:0; font-family:"Microsoft YaHei"; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+time, mark, audio, video{ margin:0; padding:0; border:0; font-size:100%; text-decoration:none; }
+html { line-height:1; }
+q, blockquote { quotes:none; }
+q:before, q:after, blockquote:before, blockquote:after { content:""; content:none; }
+a img { border:none; }
+ol, ul { list-style:none; }
+table { border-collapse:collapse; border-spacing:0; }
+.table-container{ margin:0; padding:0; width:100%; overflow-x:auto; overflow-y:hidden; }
+.ime-disabled{ ime-mode:disabled; } 
+.clear{ clear:both; font-size:0px; height:0px; overflow:hidden; }
+.line5{ clear:both; font-size:0px; height:5px; overflow:hidden; }
+.line10{ clear:both; font-size:0px; height:10px; overflow:hidden; }
+.line15{ clear:both ;font-size:0px; height:15px; overflow:hidden; }
+.line20{ clear:both; font-size:0px; height:20px; overflow:hidden; }
+.line30{ clear:both; font-size:0px; height:30px; overflow:hidden; }
+.left{ float:left; }
+.right{ float:right; }
+.loginbody{ background:#267cb7; text-align:center; }
+.indexbody{ width:100%; height:100%; overflow:hidden; }
+.mainbody{ /*padding:10px 15px;*/ margin:10px 15px; min-width:285px; }
+/* =========================全局样式.开始========================= */
+* { padding:0; margin:0; font-family:"微软雅黑","Microsoft YaHei"; border:0; text-decoration:none; list-style-type:none; font-style:none; }
+a { color:#fff; text-decoration:none; }
+a:link, a:visited { color:#2A72C5; text-decoration:none; }
+a:active, a:hover { color:#0065D9; text-decoration:underline; }
+body { overflow-x:hidden; }
+/* =========================全局样式.结束========================= */
+
+/*================管理首页布局.开始===================*/
+.main-top { position:absolute; top:0; right:0; left:180px; height:50px; z-index:11; }
+.main-left { position:absolute; top:0; bottom:0; left:0; width:180px; z-index:10; }
+.main-container { position:absolute; top:51px; right:0; bottom:0; left:180px; overflow:hidden; -webkit-overflow-scrolling:touch; overflow-y:auto; }
+.main-container iframe { position:absolute; top:0; right:0; bottom:0; left:0; width:100%; height:100%; }
+/*================管理首页布局.结束===================*/
+
+.location { padding-bottom:9px; border-bottom:solid 1px #008fbf; height:22px; line-height:22px; font-size:12px; color:#fff; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+.location a { display:inline-block; color:#fff; text-decoration:none; }
+.location a:hover { color:#0065D9; text-decoration:none; }
+.location a i { display:inline-block; margin-right:5px; width:12px; height:14px; color:#333; font-size:12px; line-height:12px; vertical-align:middle; }
+.location a.back { margin-right:15px; }
+.location .arrow { display:inline-block; margin:auto 0; width:10px; height:14px; color:#333; font-size:10px; line-height:12px; vertical-align:middle; -webkit-transform:scale(0.833); }
+/* =========================管理首页样式.开始======================= */
+
+
+/*顶部样式*/
+.main-top { background:#09C; border-bottom:1px solid #008fbf; }
+
+.nav-right .nav_top { float:left; min-width:50px; padding:0 5px; display:inline-block; text-align:center; line-height:50px; border-right: 1px solid #008fbf; color:#fff; cursor:pointer; }
+.nav-right .nav_top:hover { background:#0087b4; }
+.nav-right .nav_top i.fa { }
+.nav-right .nav_top a { color:#fff; text-decoration:none; }
+.nav-right .nav_top #msg_nums { border: 0px; font-size: 10px; color: #FFFFFF; background: #ef3e39; min-width: 13px; padding:0 5px 1px 5px; height: 13px; line-height: 13px; border-radius: 3px; }
+
+.nav-right .changefg{ font-size:15px;}
+
+
+/*顶部主菜单*/
+.icon-menu { display:block; float:left; width:45px; height:50px; border-right:1px solid #008fbf; text-align:center; cursor:pointer; overflow:hidden; }
+.icon-menu:hover { text-decoration:none; }
+.icon-menu i { color:#fff; font-size:18px; line-height:50px; }
+.main-nav { display:block; float:left; }
+.main-nav a { display:block; float:left; margin:0; padding:0 5px; border-right:1px solid #008fbf; min-width:60px; text-align:center; height:50px; line-height:50px; color:#fff; font-size:14px; cursor:pointer; }
+.main-nav a.selected, .main-nav a:hover { color:#fff; text-decoration:none; background:#0087b4; }
+/*顶部右边导航*/
+.nav-right { float:right; }
+.nav-right .info { float:left; padding-right:10px; padding-left:10px; height:50px; line-height:50px; min-width:100px; }
+.nav-right .info h4 { display:block; float:left; margin-right:8px; width:45px; }
+.nav-right .info h4 img { width:40px; height:40px; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; border:1px solid #008fbf; }
+.nav-right .info span { display:block; float:left; padding-top:8px; color:#fff; font-size:12px; line-height:1.4em; }
+/*右边导航菜单项*/
+.nav-right .option { position:relative; cursor:pointer; float:left; padding:0 11px; border-left:1px solid #008fbf; }
+.nav-right .option i { display:block; width:20px; height:50px; text-align:center; color:#fff; font-size:18px; line-height:50px; }
+.nav-right .option:hover { color:#333; }
+.nav-right .option:hover .drop-wrap { display:block; }
+.drop-wrap { display:none; position:absolute; top:50px; right:-1px; }
+.drop-wrap .item { min-width:120px; margin-top:0px; padding:0; background-color: #fff; -webkit-background-clip: padding-box; background-clip: padding-box; border: 1px solid #ccc; border: 1px solid rgba(0, 0, 0, .15); border-radius: 4px; -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175); box-shadow: 0 6px 12px rgba(0, 0, 0, .175); }
+.drop-wrap .item li a { display:block; padding:10px 16px; color:#333; font-size:12px; line-height:1em; text-align:center; white-space:nowrap; }
+.drop-wrap .item li a:hover { color:#fff; text-decoration:none; background:#0099cc; }
+/*左边样式*/
+.main-left { background:#444c63; }
+.logo { display:block; height:50px; background:url(../images/logo.png) no-repeat center #09C; border:1px solid #008fbf; border-top:0; border-left:0; text-indent:-9999px; overflow:hidden; }
+.sidebar-nav .list-group { display:none; }
+.sidebar-nav .list-group .list-wrap { position:absolute; top:51px; right:0; bottom:0; left:0; padding:0; width:180px; overflow:auto; }
+.sidebar-nav .list-group h1 { display:none; }
+.sidebar-nav .list-group h2 { position:relative; display:block; color:#fff; font-size:12px; font-weight:normal; line-height:40px; border-bottom:1px solid #468dbd; }
+.sidebar-nav .list-group h2 i { position:absolute; display:block; top:11px; right:0; width:20px; height:20px; color:#c0c0c0; font-size:10px; text-align:center; line-height:20px; }
+.sidebar-nav .list-group ul { }
+.sidebar-nav .list-group ul li a { position:relative; display:block; color:#fff; font-size:14px; height:45px; line-height:45px; cursor:pointer; overflow:hidden; background:#444c63; }
+.sidebar-nav .list-group ul li a.m_zhu { background:#22282e !important; padding-left:35px; }
+.sidebar-nav .list-group ul li a.m_zi { padding-left:18px; color:#f2f5f9; }
+.sidebar-nav .list-group ul li a:hover { text-decoration:none; background:#545f71; color:#fbfbfb; }
+.sidebar-nav .list-group ul li a.selected { text-decoration:none; background:#0099cc; color:#fbfbfb; }
+.sidebar-nav .list-group ul li a .fa { display:block; float:left; margin-left:16px; margin-right:8px; min-width:15px; height:45px; line-height:46px; font-size:14px; text-align:center; overflow:hidden; }
+.sidebar-nav .list-group ul li a .zhu { float:right; width:40px; height:40px; line-height:40px; color:#fff; font-size:12px; text-align:center; -webkit-transform:scale(0.833); margin-right: 1px; }
+/*迷你界面样式*/
+.lay-mini .main-top { left:0; }
+.lay-mini .main-nav { display:none; }
+.lay-mini .main-container { left:45px; }
+.lay-mini .main-left { background:#444c63; width:45px; }
+.lay-mini .sidebar-nav .list-group { display:block!important; margin:0; padding:0; width:45px; height:45px; }
+.lay-mini .sidebar-nav .list-group h1 { display:block; margin:0; padding:0; width:45px; height:45px; line-height:45px; text-align:center; cursor:pointer; overflow:hidden; }
+.lay-mini .sidebar-nav .list-group.selected h1 { background:#09C; }
+.sidebar-nav .list-group:hover h1 { background:#1983a7; }
+.lay-mini .sidebar-nav .list-group h1 i { color:#f3f3f3; font-size:16px; }
+.lay-mini .sidebar-nav .list-group h1 img { width:14px; height:14px; }
+.lay-mini .sidebar-nav .list-group .list-wrap { display:none; position:absolute; top:51px; left:44px; bottom:0; width:160px; background:#444c63; }
+.lay-mini .sidebar-nav .list-group:hover .list-wrap { display:block; }
+/*右边框架*/
+.main-container { background:#fff; }
+/*快捷导航*/
+.btn-paograms { display:block; position:absolute; bottom:15px; right:25px; z-index:12; cursor:pointer; width:20px; height:20px; text-align:center; }
+.btn-paograms:hover { text-decoration:none; }
+.btn-paograms i { color:#c6c7c8; font-size:20px; line-height:20px; }
+.btn-paograms:hover i { color:#444c63; }
+.pop-menu { /*visibility:hidden;*/ display:none; position:absolute; right:20px; bottom:40px; z-index:12; background:#09F; }
+.pop-menu .pop-box { position:absolute; display:block; right:0; bottom:5px; padding:30px 10px 10px 11px; border:1px solid #dbdbdb; background:#fff; box-shadow:0 0 5px 0 rgba(0, 0, 0, 0.1); overflow:hidden; }
+.pop-menu .pop-box .list-box { display:block; width:100%; height:100%; overflow:auto; }
+.pop-menu .pop-box .list-box .list-group { display:block; float:left; margin-left:-1px; padding:0; width:120px; height:auto; border:1px solid #f2f2f2; overflow:hidden; }
+.pop-menu .pop-box .list-box .list-group:first-child { margin-left:0; }
+.pop-menu .pop-box .list-box .list-group h1 { display:none; }
+.pop-menu .pop-box .list-box .list-group h2 { padding:8px; font-size:12px; color:#555; font-weight:bold; line-height:1.0em; background:#f9f9f9; }
+.pop-menu .pop-box .list-box .list-group h2 i { display:none; }
+.pop-menu .pop-box .list-box .list-group ul { margin-left:10px; }
+.pop-menu .pop-box .list-box ul li a { display:block; padding:8px 10px; font-size:12px; color:#fff; line-height:1.0em; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+.pop-menu .pop-box .list-box ul li a:hover { text-decoration:none; }
+.pop-menu .pop-box .list-box ul li a.nolink { font-weight:bold; cursor:default; }
+.pop-menu .pop-box .list-box ul li a.link { cursor:pointer; }
+.pop-menu .pop-box .list-box ul li a.link:hover { color:#fff; background:#55afeb; }
+.pop-menu .pop-box h1.title { position:absolute; top:8px; left:10px; line-height:14px; font-size:13px; font-weight:bold; color:#333; }
+.pop-menu .pop-box h1.title i { display:inline-block; margin-right:2px; width:14px; color:#fff; font-size:14px; line-height:1em; text-align:center; vertical-align:top; }
+.pop-menu .pop-box .close { position:absolute; display:block; top:8px; right:6px; width:14px; height:14px; color:#fff; font-size:12px; text-align:center; line-height:14px; cursor:pointer; }
+.nlist-1 { padding:8px 0; color:#444; font-size:12px; }
+.nlist-1 ul { position:relative; padding:0 0 0 20px; }
+.nlist-1 ul:after { clear:both; content:"."; display:block; height:0; visibility:hidden; }
+.nlist-1 ul li { float:left; width:33.32%; }
+.nlist-1 ul li p { margin-right:10px; line-height:32px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+.nlist-2 { line-height:30px; border:1px solid #ebebeb; color:#444; font-size:12px; }
+.nlist-2 h3 { margin:0; padding:0 0 0 20px; font-size:12px; font-weight:bold; color:#333; line-height:34px; height:34px; }
+.nlist-2 h3 i { display:inline-block; margin-right:3px; width:14px; color:#333; font-size:12px; line-height:12px; vertical-align:middle; }
+.nlist-2 ul { padding:0 0 10px 20px; }
+.nlist-2 ul:after { clear:both; content:"."; display:block; height:0; visibility:hidden; }
+.nlist-2 ul li { float:left; width:33.32%; }
+.nlist-2 ul li p { margin-right:10px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+/* =========================管理首页样式.结束======================= */
+
+.new-msg .layui-layer-title{ background:#3ca7ef;color:#fff;height:38px;line-height:38px;}
+.new-msg .layui-layer-btn a{ font-size:13px;}
+.new-msg .layui-layer-setwin{ right:12px;top:12px;}
