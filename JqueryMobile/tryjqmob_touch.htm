@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+$(document).on("pageinit",function(event){
+  $(".touch").on("tap",function(event){
+    $(".text").html("<span>点击！</span>").css({"color":"red","font-size":"500%","text-align":"center"});                 
+  });
+  $(".touch").on("swipeleft",function(event){
+    $(".text").html("<span>向左滑动！</span>").css({"color":"purple","font-size":"500%","text-align":"center"});               
+  });  
+  $(".touch").on("swiperight",function(event){
+    $(".text").html("<span>向右滑动！</span>").css({"color":"green","font-size":"500%","text-align":"center"});                     
+  }); 
+});
+</script>
+<style>
+div
+{
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+</style>
+</head>
+<body>
+
+<div data-role="page" data-theme="d">
+  <div data-role="content">
+    <div class="touch">
+      <div class="text" style="text-align:center;border:1px solid black;height:100px;"><br><br>点击或者滑动本区域</div>
+    </div>
+  </div>
+</div> 
+
+</body>
+</html>

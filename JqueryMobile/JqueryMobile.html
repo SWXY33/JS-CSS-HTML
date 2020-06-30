@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" />
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script> 
+		$(document).on("pagecreate",function(event){
+		  $(window).on("orientationchange",function(event){
+		    alert("方向改变为: " + event.orientation);
+		  });                     
+		});
+		</script>
+	</head>
+	<body>
+		<div data-role="page" id="pageone">
+		  <div data-role="header">
+			<a href="#" class="ui-btn ui-icon-home ui-btn-icon-left">主页</a>  
+		  <h1>首页   jQuery Mobile-移动Web应用的前端开发框架</h1>
+		  <a href="#" class="ui-btn ui-icon-search ui-btn-icon-left">搜索</a>
+		  头部栏一般包含页面标题/logo 或一两个按钮（通常是首页、选项或搜索）
+		  </div>
+		
+		  <div data-role="content">
+			<div data-role="main" class="ui-content">
+				<iframe src="tryjqmob_touch.htm" scrolling="no" frameborder="0" width="99%" height="150px" seamless=""></iframe>
+				<table class="lamp" id="table2"><tr>
+				<th width="34"><img src="images/bg-head-pic.png" width="32" height="32" alt="lamp"></th>
+				<td>触摸事件同样可应用与桌面电脑上：<strong>点击或者滑动鼠标！</strong>
+				</td>
+				</table>
+				<div><h2>一、jQuery Mobile页面</h2>
+			  <a href="#pagetwo">1.跳转到第二个页面（内页链接）</a> <br>
+			   <a href="externalfile.html">2.访问外部文件(jQuery Mobile 面板)</a><br>
+			   <a href="#pagethree">3.页面作为对话框弹出</a><br>
+			   </div>
+		  <p>实例解析：<br>
+		  <img src="img/example.png" style="width: 80%;"/><br>
+			data-role="page" 是在浏览器中显示的页面。<br>
+			data-role="header" 是在页面顶部创建的工具条 (通常用于标题或者搜索按钮)<br>
+			data-role="main" 定义了页面的内容，比如文本， 图片，表单，按钮等。<br>
+			"ui-content" 类用于在页面添加内边距和外边距。<br>
+			data-role="footer" 用于创建页面底部工具条。<br>
+			在这些容器中你可以添加任何 HTML 元素 - 段落, 图片, 标题, 列表等。<br></p>
+			
+			<div><h2>二、jQuery Mobile过渡</h2>
+			<img src="img/guodu.png" style="width: 80%;"/><br>
+			<a href="#pagetwo" data-transition="fade">1.fade(默认)-淡入到下一页</a><br>
+			<a href="#pagetwo" data-transition="flip">2.flip-从后向前翻转到下一页</a><br>
+			<a href="#pagetwo" data-transition="flow">3.flow-抛出当前页，进入下一页</a><br>
+			<a href="#pagetwo" data-transition="pop">4.pop-像弹出窗口那样转到下一页</a><br>
+			<a href="#pagetwo" data-transition="slide">5.slide-从右向左滑动到下一页</a><br>
+			<a href="#pagetwo" data-transition="slidefade">6.slidefade-从右向左滑动并淡入到下一页</a><br>
+			<a href="#pagetwo" data-transition="slideup">7.slideup-从下到上滑动到下一页</a><br>
+			<a href="#pagetwo" data-transition="slidedown">8.slidedown-从上到下滑动到下一页</a><br>
+			<a href="#pagetwo" data-transition="turn">7.turn-转向下一页</a><br>
+			<a href="#pagetwo" data-transition="none">8.none-无过渡效果</a><br>
+			<a href="#pageslide" data-transition="slide">8.slide-切换效果跳转页面（下个页面的a标签要使用data-direction="reverse"）</a><br>
+		  </div>
+		  
+		  <div><h2>三、jQuery Mobile按钮</h2>
+		   <img src="img/button.png" style="width: 80%;"/><br>
+		  <button class="ui-btn">1.button按钮</button>
+		  <input type="button" value="2.input按钮">
+		  <a href="#" class="ui-btn">3.a标签class="ui-btn"按钮</a>
+		  <a href="#pagetwo" data-role="button">4.a标签data-role="button"按钮</a>
+		  <a href="#pagetwo" class="ui-btn ui-btn-inline">5.内联按钮:class="ui-btn ui-btn-inline"</a>
+		   <div data-role="controlgroup" data-type="horizontal">
+		        <p>6.水平组合按钮:</p>
+		        <a href="#" class="ui-btn">按钮 1</a>
+		        <a href="#" class="ui-btn">按钮 2</a>
+		        <a href="#" class="ui-btn">按钮 3</a>
+		      </div><br>
+		      
+		      <div data-role="controlgroup" data-type="vertical">
+		        <p>7.垂直组合按钮 (默认):</p>
+		        <a href="#" class="ui-btn">按钮 1</a>
+		        <a href="#" class="ui-btn">按钮 2</a>
+		        <a href="#" class="ui-btn">按钮 3</a>
+		      </div>
+			  <a href="#" class="ui-btn" data-rel="back">8.后退按钮href="#" class="ui-btn" data-rel="back"</a>
+			  <p>9.内联按钮:</p>
+			      <a href="#" class="ui-btn ui-btn-inline">灰色按钮 (默认)class="ui-btn ui-btn-inline"</a>
+			      <a href="#" class="ui-btn ui-btn-inline ui-btn-b">黑色按钮class="ui-btn ui-btn-inline ui-btn-b"</a>
+			 <p>10.内联按钮带圆角与不带圆角效果：</p>
+			    <a href="#" class="ui-btn ui-btn-inline ui-corner-all">按钮 2 class="ui-btn ui-btn-inline ui-corner-all"</a>
+			    <a href="#" class="ui-btn ui-btn-inline">按钮 2 class="ui-btn ui-btn-inline"</a> 
+				 <a href="#" class="ui-btn ui-btn-inline ui-mini">11.小按钮class="ui-btn ui-btn-inline ui-mini"</a>
+				 <a href="#" class="ui-btn ui-btn-inline ui-shadow">12.有阴影按钮class="ui-btn ui-btn-inline ui-shadow" 1</a>
+		  </div>
+		  
+		   <div><h2>四、jQuery Mobile按钮图标</h2>
+		     <a href="#" class="ui-btn ui-icon-arrow-l ui-btn-inline ui-btn-icon-left">左边箭头图标</a>
+			 <a href="#" class="ui-btn ui-icon-arrow-r ui-btn-inline ui-btn-icon-left">右边箭头图标</a>
+			 <a href="#" class="ui-btn ui-btn-inline ui-icon-info ui-btn-icon-left">信息图标</a>
+			 <a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-left">删除</a>
+			 <a href="#" class="ui-btn ui-btn-inline ui-icon-back ui-btn-icon-right">后退 ui-btn-icon-right</a>
+			 <a href="#" class="ui-btn ui-btn-inline ui-icon-audio ui-btn-icon-top">扬声器 ui-btn-icon-top</a>
+			 <a href="#" class="ui-btn ui-btn-inline ui-icon-lock ui-btn-icon-left">挂锁</a>
+			 <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left">搜索</a>
+			 <a href="#" class="ui-btn ui-btn-inline ui-icon-alert ui-btn-icon-left">警告</a>
+			 <a href="#" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-bottom">网络ui-btn-icon-bottom</a>
+			 <a href="#" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-left">主页</a>
+			 <a href="#" class="ui-btn ui-btn-inline ui-icon-action ui-btn-icon-left">动作</a>
+			 <p>只有图标没有文本的按钮 - 添加圆角及阴影:</p>
+			     <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-notext">搜索</a>
+				 <p>白色 "搜索" 图标 (默认):</p>
+    <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left ui-corner-all ui-shadow">白色图标(默认)</a>  
+    <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow">白色图标(默认)</a>
+
+    <p>黑色 "搜索" 图标  (class="ui-alt-icon"):</p>
+    <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left ui-corner-all ui-shadow ui-alt-icon">黑色图标</a>   
+    <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow ui-alt-icon">黑色图标</a>
+    
+    <p>黑色 "搜索" 图标不使用灰色圆圈 (组合使用 "ui-nodisc-icon" 和 "ui-alt-icon"):</p>
+    <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon">黑色图标</a>   
+    <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon">黑色图标</a>
+		</div>
+		
+		 <div><h2>五、jQuery Mobile弹窗</h2>
+		 <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">1.显示弹窗</a>
+		     <div data-role="popup" id="myPopup">
+		       <p>这是一个简单的弹窗</p>
+		     </div>
+		<a href="#myPopup1" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">2.显示弹窗</a>
+		    <div data-role="popup" id="myPopup1" class="ui-content">
+		      <h3>欢迎!</h3>
+		      <p>"ui-content" 类在弹窗使用 <span style="font-size:55px;">样式文本</span> 时是特别有用的，它可以使得弹窗看起来更加美观时尚。 <strong>注意：</strong> 如果需要文本会包含多行。</p>
+		    </div>	 
+		 <a href="#myPopup2" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">3.显示弹窗（右侧关闭）</a>
+		     <div data-role="popup" id="myPopup2" class="ui-content">
+		       <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">关闭</a>
+		        <p>我在右上角有个关闭按钮</p>
+		       <p><b>提示:</b> 你也可以通过点击弹窗外的区域来关闭弹窗。</p>
+		     </div>
+		<a href="#myPopup3" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">4.显示弹窗（左侧关闭）</a>
+		    <div data-role="popup" id="myPopup3" class="ui-content">
+		      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-left">关闭</a>
+		      <p>我在左上角有个关闭按钮</p>
+		      <p><b>提示:</b> 你也可以通过点击弹窗外的区域来关闭弹窗。</p>
+		    </div>
+		<a href="#myPopup4" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">5.显示弹窗（使用 data-dismissible 属性）</a>
+		    <div data-role="popup" id="myPopup4" class="ui-content" data-dismissible="false" style="max-width:400px;">
+		      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">关闭</a>
+		      <p>我是不可取消的按钮 (data-dismissible="false)。唯一关闭这个弹窗的方式是通过点击右上角的关闭按钮。你无法通过点击弹窗之外的区域关闭弹窗。</p>
+		    </div>
+		<a href="#myPopup5" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all" data-position-to="window">6.弹窗在窗口居中显示data-position-to="window"</a>
+		    <a href="#myPopup6" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all" data-position-to="#demo">7.弹窗显示在 id="demo" 元素上data-position-to="#demo"</a>	
+			<div data-role="popup" id="myPopup5" class="ui-content">
+			      <p>我显示在窗口的中间部分。</p>
+			    </div>
+			    <div data-role="popup" id="myPopup6" class="ui-content">
+			      <p>我显示在 id="demo" 的元素上。</p>
+			    </div>
+			<p>这是一个段落。这个段落包含了子元素：这是一个插入在段落中 id="demo" 的 <span id="demo" style="color:red;">span</span> 元素 。</p>
+			 <h3 style="color:red;">以下演示了弹窗所有过渡效果的实例：</h3>
+			    <p><b>注意：</b> 从性能方面上考虑， jQuery Mobile 推荐使用 "pop", "fade" 或 "none" 过渡效果。</p>
+			    <a href="#myPopup0" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="fade">（默认）淡入data-transition="fade"</a>
+			    <a href="#myPopup0" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="flip">翻转flip</a>
+			    <a href="#myPopup0" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="flow">抛出当前页后显示flow</a>
+			    <a href="#myPopup0" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="pop">弹出pop</a>
+			    <a href="#myPopup0" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="slide">向左滑动slide</a>
+			    <a href="#myPopup0" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="slidefade">向左滑动并淡入slidefade</a>
+			    <a href="#myPopup0" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="slideup">向上滑动slideup</a>
+			    <a href="#myPopup0" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="slidedown">向下滑动slidedown</a>
+			    <a href="#myPopup0" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="turn">转向turn</a>
+			    <a href="#myPopup0" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="none" >无过渡效果none</a>
+			    <div data-role="popup" id="myPopup0" class="ui-content">
+			      <p>这是一个简单的弹窗。</p>
+			    </div>
+				<h3 style="color:red;">点击按钮打开一个带方向边框的弹窗： 弹框的data-arrow 属性，并指定值 "l" (左边), "t" (顶部), "r" (右边) or "b" (底部)</h3>
+				    <a href="#m1" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="#demo">左边</a>
+				    <a href="#m2" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="#demo">顶部</a>
+				    <a href="#m3" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="#demo">右边</a>
+				    <a href="#m4" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="#demo">底部</a>
+				    
+				    <div data-role="popup" id="m1" class="ui-content" data-arrow="l">
+				      <p>在左边框有个方向 data-arrow="l"。</p>
+				    </div>
+				    <div data-role="popup" id="m2" class="ui-content" data-arrow="t">
+				      <p>在顶部边框有个方向 data-arrow="t"。</p>
+				    </div>
+				    <div data-role="popup" id="m3" class="ui-content" data-arrow="r">
+				      <p>在右边框有个方向 data-arrow="r"。</p>
+				    </div>
+				    <div data-role="popup" id="m4" class="ui-content" data-arrow="b">
+				      <p>在底部边框有个方向 data-arrow="b"。</p>
+					</div>
+				<h3 style="color:red;">点击图片弹窗</h3>
+				<a href="#popimg" data-rel="popup" data-position-to="window">
+				    <img src="../x/img/1.jpg" alt="Skaret View" style="width:100px;"></a>
+				    <div data-role="popup" id="popimg">
+				      <p>这是我的图片！</p> 
+				      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="../x/img/1.jpg" style="width:800px;height:600px;" alt="Skaret View">
+				    </div><br>
+				<a href="#coverbg" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">点击弹窗背景覆盖(data-overlay-theme="b"深色) data-overlay-theme="a"浅色</a>
+				    <div data-role="popup" id="coverbg" class="ui-content" data-overlay-theme="b">
+				      <p>在我身后有个深色背景。</p>
+				    </div>
+		  </div>
+		  
+		  
+		</div>
+		  <div data-role="footer">
+		  <a href="#" class="ui-btn ui-btn-active ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">首页ui-btn-active(激活按钮)</a>
+		  	<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-grid ui-btn-icon-left">朋友圈</a>
+		  	<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-comment ui-btn-icon-left">消息</a>
+		  </div>
+		</div>
+		
+		
+</div>
+
+
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+			<h1>jQuery Mobile-移动Web应用的前端开发框架</h1>
+			</div>
+		  <div data-role="main" class="ui-content">
+		    <a href="#pageone">返回</a><br>
+
+		  </div>
+		  <img src="img/ex.png" />
+		    <div data-role="footer">
+		    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">首页</a>
+		    	<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">朋友圈</a>
+		    	<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">消息</a>
+		    </div>
+		</div>
+		<div data-role="page" id="pageslide">
+			<div data-role="header">
+			<h1>jQuery Mobile-移动Web应用的前端开发框架</h1>
+			</div>
+		  <div data-role="main" class="ui-content">
+		    <a href="#pageone" data-transition="slide" data-direction="reverse">切换效果跳转页面</a>
+		  </div>
+		  <img src="img/ex.png" />
+		    <div data-role="footer">
+		    <h1>底部文本</h1>
+		    </div>
+		</div>
+		<div data-role="page" data-dialog="true" id="pagethree">
+		  <div data-role="header">
+		    <h1>我是一个对话框！</h1>
+		  </div>
+		
+		  <div data-role="main" class="ui-content">
+		    <p>对话框与普通页面不同，它显示在当期页面上, 但又不会填充完整的页面，顶部图标 "X" 用于关闭对话框。</p>
+		    <a href="#pageone">返回</a>
+		  </div>
+		   <div data-role="footer">
+			   <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">首页</a>
+			   	<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">朋友圈</a>
+			   	<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">消息</a>
+		     
+		    </div>
+		  </div>
+	</body>
+</html>
