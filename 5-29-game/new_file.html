@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+ $(function(){
+      var temp=$(".one");//[Object Object]
+      for(var i=0;i<temp.length;i++){
+        // alert(temp[i])//[Object HTMLDivElement]
+          var str1=temp[i].innerHTML.replace("2","5");
+         temp[i].innerHTML=str1;
+         }
+    });
+ function change(){
+     //案例1
+     //[Object HTMLDivElement]
+    /* var id11=document.getElementById("id1");
+     alert(id11);
+     id11.innerHTML ='12345';*/
+      
+     //案例2
+     //[Object Object]
+    /* alert($("#id1"));
+     $("#id1").html("1234");*/
+      
+     //案例3
+     var temp=$(".one");//[Object Object]
+     for(var i=0;i<temp.length;i++){
+         alert(temp[i])//[Object HTMLDivElement]
+         var str1=temp[i].innerHTML.replace("5","3");
+         temp[i].innerHTML=str1;
+    }
+ }
+ /**
+ 总结：
+ 以上可知道一个[Object HTMLDivElement] 其实就相当于一个div元素
+  那么尤其是我们根据class名称获取多个一个[Object HTMLDivElement]
+  根据i值取出每一个值之后，我们使用innerHTML方法可以进行文本操作
+ */
+ 
+</script>
+</head>
+ 
+<body>
+<div class="one" id="id1">123</div>
+<div class="one" id="id2">426</div>
+<div class="one" id="id3">729</div>
+<a href="javascript:void(0)" οnclick="change()">改变</a>
+</body>
+</html>
