@@ -1,0 +1,255 @@
+.container{
+	width:1850px;
+	height: 900px;
+	margin: auto;
+}
+
+a{ text-decoration:none} 
+
+.ready{
+	    position: absolute;
+		margin-top: -200px;
+		width: 200px;
+		margin-left: 50px;
+}
+.start{
+	cursor: pointer;/*鼠标变成手指样式*/
+	transition: all 0.6s;/*所有属性变化在0.6秒内执行动画*/
+	text-align: center;
+	width: 150px;
+	height: 50px;
+	background-color: #C0C0C0;
+	font-size: 30px;
+}
+.again{
+	cursor: pointer;/*鼠标变成手指样式*/
+	transition: all 0.6s;/*所有属性变化在0.6秒内执行动画*/
+	text-align: center;
+	width: 150px;
+	height: 50px;
+	background-color: #C0C0C0;
+	font-size: 30px;
+}
+.desk{
+	margin-left: 700px;
+	margin-top: -270px;
+	width: 400px;
+	height: 400px;
+	border: 2px solid #000000;
+}
+.roleA{
+	width: 50px;
+	margin-top: -30px;
+	margin-left: 200px;
+}
+.roleB{
+	width: 50px;
+	margin-top: 415px;
+	margin-left: 200px;
+}
+.roleC{
+	width: 50px;
+	margin-left: -25px;
+	margin-top: -240px;
+}
+.roleD{
+	width: 50px;
+	margin-top: -20px;
+	margin-left: 410px;
+}
+.A{
+	text-align: center;
+	white-space: pre-line;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-left: 665px;
+	margin-top: -0px;
+	width: 465px;
+	height: 150px;
+	border: 2px solid #000000;
+}
+.B{
+	text-align: center;
+	white-space: pre-line;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-left: 665px;
+	margin-top: 20px;
+	width: 465px;
+	height: 150px;
+	border: 2px solid #000000;
+}
+.C{
+	transform:rotate(90deg);/*旋转90度*/
+	-ms-transform:rotate(90deg); /* Internet Explorer 9*/
+	-moz-transform:rotate(90deg); /* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+	-o-transform:rotate(90deg); /* Opera */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	text-align: center;
+	white-space: pre-line;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-left: 230px;
+	margin-top: 220px;
+	width: 465px;
+	height: 150px;
+	border: 2px solid #000000;
+}
+.D{
+	transform:rotate(270deg);/*旋转270度*/
+	-ms-transform:rotate(270deg); /* Internet Explorer 9*/
+	-moz-transform:rotate(270deg); /* Firefox */
+	-webkit-transform:rotate(270deg); /* Safari 和 Chrome */
+	-o-transform:rotate(270deg); /* Opera */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	text-align: center;
+	white-space: pre-line;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-left: 1100px;
+	margin-top: -150px;
+	width: 465px;
+	height: 150px;
+	border: 2px solid #000000;
+}
+.operateA{
+	position: absolute;
+	width: 525px;
+	height: 50px;
+	margin-left: 740px;
+	margin-top: 150px;
+    visibility: hidden;/*初始隐藏，占用空间*/
+}
+.operateB{
+	width: 525px;
+	height: 50px;
+	margin-left: 640px;
+	margin-top: 30px;
+	visibility: hidden;/*初始隐藏，占用空间*/
+}
+.operateC{
+	transform:rotate(90deg);/*旋转90度*/
+	-ms-transform:rotate(90deg); /* Internet Explorer 9*/
+	-moz-transform:rotate(90deg); /* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+	-o-transform:rotate(90deg); /* Opera */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	position: absolute;
+	width: 325px;
+	height: 50px;
+	margin-left: 400px;
+	margin-top: 330px;
+	visibility: hidden;/*初始隐藏，占用空间*/
+}
+.operateD{
+	transform:rotate(270deg);/*旋转270度*/
+	-ms-transform:rotate(270deg); /* Internet Explorer 9*/
+	-moz-transform:rotate(270deg); /* Firefox */
+	-webkit-transform:rotate(270deg); /* Safari 和 Chrome */
+	-o-transform:rotate(270deg); /* Opera */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	position: absolute;
+	width: 325px;
+	height: 50px;
+	margin-left: 1080px;
+	margin-top: -75px;
+	visibility: hidden;/*初始隐藏，占用空间*/
+}
+
+.operate1{
+	cursor: pointer;/*鼠标变成手指样式*/
+	margin-left: 5px;
+	text-align: center;
+	width: 100px;
+	height: 50px;
+	font-size: 30px;
+	background-color: s;
+}
+.poker{
+	cursor: pointer;/*鼠标变成手指样式*/
+	float: left;
+	width: 30px;
+	height: 150px;	
+	line-height: 30px;
+	text-align: center;
+	border: 0.1px solid #000000;
+}
+.active { 
+	cursor: pointer;/*鼠标变成手指样式*/
+	float: left;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background: #f80; }
+.D .poker{
+	float: left;
+	width: 30px;
+	height: 30px;
+}
+.out_A{
+	position: absolute;
+	text-align: center;
+	white-space: pre-line;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-left: 100px;
+	margin-top: -400px;
+	width: 200px;
+	height: 50px;
+	border: 0.1px solid #000000;
+}
+.out_B{
+	text-align: center;
+	white-space: pre-line;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-left: 100px;
+	margin-top: 85px;
+	width: 200px;
+	height: 50px;
+	border: 0.1px solid #000000;
+}
+.out_C{
+	transform:rotate(90deg);/*旋转90度*/
+	-ms-transform:rotate(90deg); /* Internet Explorer 9*/
+	-moz-transform:rotate(90deg); /* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+	-o-transform:rotate(90deg); /* Opera */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	position: absolute;
+	text-align: center;
+	white-space: pre-line;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-left: -75px;
+	margin-top: -230px;
+	width: 200px;
+	height: 50px;
+	border: 0.1px solid #000000;
+}
+.out_D{
+	transform:rotate(270deg);/*旋转270度*/
+	-ms-transform:rotate(270deg); /* Internet Explorer 9*/
+	-moz-transform:rotate(270deg); /* Firefox */
+	-webkit-transform:rotate(270deg); /* Safari 和 Chrome */
+	-o-transform:rotate(270deg); /* Opera */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	position: absolute;
+	text-align: center;
+	white-space: pre-line;
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-left: 275px;
+	margin-top: -230px;
+	width: 200px;
+	height: 50px;
+	border: 0.1px solid #000000;
+}
+.out_pokers{
+	float: left;
+	width: 30px;
+	height: 40px;
+    border: 0.1px solid #000000;
+}
