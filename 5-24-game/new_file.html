@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+e799bee5baa6e78988e69d8331333361313863html,body,div { margin: 0; padding: 0; }
+.wrap div { display: inline-block; width: 60px; height: 30px; margin: 40px 5px; border-radius: 5px; background: #ccc; cursor: pointer; }
+.wrap .active { background: #f80; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="active"></div>
+<div></div>
+<div></div>
+</div>
+<script>
+var wrap = document.querySelector('.wrap');
+wrap.onclick = function(e){
+var $this = e.srcElement || e.target;
+Array.prototype.slice.call(this.children).forEach(function(value){
+value.className = '';
+})
+$this.className = 'active';
+}
+</script>
+</body>
+</html><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
