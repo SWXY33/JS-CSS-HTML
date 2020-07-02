@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+					
+	<!-- 定时处理文件表 -->
+	<bean id="sysfileTableDel" class="com.guet.task.FileTableTask" >
+	</bean>
+	<bean id="sysfileTableDelTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="sysfileTableDel" />
+		<property name="targetMethod" value="run" />
+		<property name="concurrent" value="false" />
+	</bean>
+	<bean id="sysfileTableDelTaskTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<!-- see the example of method invoking job above -->
+		<property name="jobDetail" ref="sysfileTableDelTask" />
+		<!-- 10 seconds -->
+		<property name="startDelay" value="10000" />
+		<!--2 hours repeat-->
+		<!--<property name="repeatInterval" value="7200000" />-->
+		<property name="repeatInterval" value="30000" />
+	</bean>
+	
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<!-- <ref bean="sysfileTableDelTaskTrigger"/> -->
+			</list>
+		</property>
+	</bean>
+	
+</beans>

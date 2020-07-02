@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="utf-8"/>
+	<constant name="struts.objectFactory" value="spring" />
+	
+	<!-- 上传文件临时目录 ,缓存目录-->
+	<constant name="struts.multipart.saveDir" value="E:\\lushanli\\uploadTmp" ></constant>
+	<include file="struts-default.xml" />
+	<package name="default" extends="struts-default">
+	
+		<action name="login" class="login" method="login">
+			<result name="success" type="redirectAction">home.action</result>
+			<result name="error">/WEB-INF/login.jsp</result>
+			<result name="input">/WEB-INF/login.jsp</result>
+		</action>
+		
+		<action name="logout" class="login" method="logout">
+			<result name="success">/WEB-INF/home.jsp</result>
+		</action>
+		
+		<action name="home" class="login" method="home">
+			<result name="success">/WEB-INF/home.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+		<!-- 
+		<action name="clientRegister" class="register" method="clientrRegister">
+			<result name="success">/WEB-INF/login.jsp</result>
+			<result name="error">/WEB-INF/login.jsp</result>
+		</action> -->
+		
+		
+		
+		<action name="toUpload" class="upload" method="preUpload">
+			<result name="success">/WEB-INF/file.jsp</result>
+			<result name="input">/WEB-INF/file.jsp</result>
+		</action>
+		
+		<action name="upload" class="upload" method="upload">
+			<result name="success">/WEB-INF/home.jsp</result>
+			<result name="input">/WEB-INF/home.jsp</result>
+		</action>
+		
+		<action name="register" class="register" method="clientrRegister">
+			<result name="success">/WEB-INF/register.jsp</result>
+			<result name="error">/WEB-INF/register.jsp</result>
+		</action>
+		
+		<action name="syscombox" class="sysCombox"></action>
+	</package>
+	
+	<include file="struts-business.xml"></include>
+	<include file="struts-customer.xml"></include>
+</struts>

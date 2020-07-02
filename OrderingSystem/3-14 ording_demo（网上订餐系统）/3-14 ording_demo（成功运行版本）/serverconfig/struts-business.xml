@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="business" namespace="/business" extends="default">
+		<action name="toaboutMe" class="aboutMe" method="preEdit">
+			<result name="success">/WEB-INF/business/aboutMeEdit.jsp</result>
+			<result name="input">/WEB-INF/home.jsp</result>
+		</action>
+		<action name="editAboutMe" class="aboutMe" method="edit">
+			<result name="input">/WEB-INF/home.jsp</result>
+		</action>
+		<action name="openStore" class="openStore">
+			<result name="businessLogin">/WEB-INF/loginSms.jsp</result>
+			<result name="toOpenStore">/WEB-INF/business/openStore.jsp</result>
+			<result name="mystore">/WEB-INF/business/mystore.jsp</result>
+			<result name="toAddMenu">/WEB-INF/business/addMenu.jsp</result>
+		</action>
+		<action name="orderInf" class="busOrderInfAction">
+			<result name="allOrder">/WEB-INF/business/allOrder.jsp</result>
+			<result name="toSomeoneOrder">/WEB-INF/business/storeOrder.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,136 @@
+@CHARSET "UTF-8";
+.mystore {
+	margin:1px;
+	width:1200px; 
+	word-wrap:break-word;
+	overflow:auto;
+}
+.my_s {
+	width:780px; 
+	/* height:1100px; */
+	word-wrap:break-word;
+	overflow:auto;
+}
+.others {
+	
+	font-size:40px;
+	float:right;
+	width:420px; 
+	height:615px;
+	
+}
+.my_st {
+	margin:10px;
+	font-size:40px;
+	float:right;
+	border: 1px solid #000000;
+	width:400px; 
+	height:200px;
+	word-wrap:break-word;
+	overflow:auto;
+}
+.findOrder {
+	margin:10px;
+	text-align:left;
+	font-size:30px;
+	float:right;
+	width:400px; 
+	height:150px;
+	
+}
+
+.gonggao {
+	font-size:25px;
+}
+.store_menu {
+	margin:1px;
+	float:left;
+	width:500px; 
+	height:110px;
+}
+.s_t {
+	margin:5px;
+	float:left;
+	width:200px; 
+	height:100px;
+}
+.order_manage {
+	border:1px solid #000000;
+	float:left;
+	margin:10px;
+	width:750px; 
+	height:113px;
+}
+.mystore_name {
+	font-size: 25px;
+	width: 200px; 
+	height: 30px; 
+}
+.mystar_rank {
+	width: 200px; 
+	height: 20px; 
+}
+.mystar_ranking {
+	width: 60px; 
+	height: 20px;
+}
+.mystar_num {
+	width: 40px; 
+	height: 20px;
+}
+.mystore_head {
+	float:left;
+	width: 120px;
+	height: 100px;
+}
+.mystar_score {
+	width: 200px; 
+	height: 20px; 
+}
+.mysale_num {
+	color : #f00;
+	float:left;
+	width: 100px; 
+	height: 20px; 
+}
+.myprice {
+	width: 200px; 
+	height: 20px; 
+}
+.mystart_price {
+	float:right;
+	width: 80px; 
+	height: 20px; 
+}
+.store_foods {
+	float:left;
+	border:1px solid #000000;
+	margin: 10px;
+	width: 750px;
+	overflow: auto;
+}
+.add-food {
+	float:right;
+	width: 90px;
+	height:30px;
+	margin: 20px;
+}
+.store_food {
+	margin: 20px;
+	float:left;
+	width: 200px;
+	height:200px;
+}
+.s_m {
+	margin:10px;
+	width:100px; 
+	height:40px;
+	border:1px solid #800000;
+}
+.foods {
+	margin:10px;
+	font-size:20px;
+	width:100px; 
+	height:40px;
+	text-align: center;
+}

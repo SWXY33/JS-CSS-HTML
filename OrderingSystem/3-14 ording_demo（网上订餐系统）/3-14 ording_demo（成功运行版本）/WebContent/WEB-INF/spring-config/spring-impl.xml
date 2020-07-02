@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+			http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+	
+	<bean id="userImpl" class="com.guet.webservice.impl.UserServiceImpl">
+	</bean>
+
+	<bean id="fileImpl" class="com.guet.webservice.impl.FileServiceImpl">
+	</bean>
+	
+	<bean id="verifyCodeImpl" class="com.guet.webservice.impl.VerifyCodeSeviceImpl">
+	</bean>
+	
+	<bean id="comboxServiceImpl" class="com.guet.webservice.impl.SystemComboxServiceImpl">
+	</bean>
+	
+	<bean id="storeServiceImpl" class="com.guet.webservice.impl.StoreServiceImpl">
+	</bean>
+	
+	<bean id="storeMenuServiceImpl" class="com.guet.webservice.impl.StoreMenuServiceImpl">
+	</bean>
+	
+	<bean id="orderImpl" class="com.guet.webservice.impl.OrderServiceImpl">
+		<property name="storeMenuService" ref="storeMenuServiceImpl"></property>
+	</bean>
+</beans>

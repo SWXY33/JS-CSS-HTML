@@ -1,0 +1,375 @@
+@CHARSET "UTF-8";
+/*--------------------1.首页CSS--------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+	font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, label, legend, table,
+	caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	background: transparent;
+}
+body {
+	color: #555;
+	background-color: #FFF;
+	font-size: 14px;
+	line-height: 1.5em;
+	font-family: 微软雅黑, 宋体;
+}
+a {
+	text-decoration: none;
+	color: #555;
+	font-size: 14px;
+	cursor: pointer;
+}
+a:hover {
+	text-decoration: none;
+	color: #00b38a;
+	font-size: 14px;
+}
+body {
+	line-height: 1;
+}
+.clear {
+	clear: both;
+}
+.clear-10 {
+	clear: both;
+	height: 10px;
+}
+.theTop /*顶栏*/ {
+	background: #f6f6f6;
+	width: 100%;
+	border-bottom: 1px solid #dedede;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+}
+.theTop a {
+	font-size: 12px;
+}
+.theTopLeft {
+	float: left;
+}
+.container {
+	margin: auto;
+	width: 1200px;
+}
+/* 头像排版 */
+.head {
+width:200px; 
+height:300px;   
+margin:5px 5px; 
+padding:2px;
+float: left;
+}
+.restaurant {
+	width:1150px; 
+	height:155px;
+	margin:10px 5px; 
+	border:1px solid #ccc; 
+	padding:2px;
+	background:#fff;
+}
+.r_h {
+	float:left;
+	width:205px; 
+	height:150px;
+}
+.r {
+	width:205px; 
+	height:40px;
+
+}
+.storehead {
+	width:863px;
+    border:1px solid #ccc; 
+	background:#fff; 
+	margin:10px auto; 
+	padding:20px;
+	overflow:auto;
+}
+.menu {
+	width:1150px; 
+	height:40px;
+}
+
+.store_detail {
+	display: block; 
+	width: 200px; 
+	height: 100px; 
+	padding-top: 5px;
+}
+.store_name {
+	font-size: 25px;
+	width: 200px; 
+	height: 30px; 
+}
+
+.star_rank {
+	width: 200px; 
+	height: 20px; 
+}
+.star_ranking {
+	width: 60px; 
+	height: 20px;
+}
+.star_num {
+	width: 40px; 
+	height: 20px;
+}
+.star_score {
+	width: 200px; 
+	height: 20px; 
+}
+.sale_num {
+	color : #f00;
+	float:left;
+	width: 100px; 
+	height: 20px; 
+}
+.price {
+	width: 200px; 
+	height: 20px; 
+}
+.start_price {
+	float:right;
+	width: 80px; 
+	height: 20px; 
+}
+.storeheadimg {
+	float:left;
+	width: 200px;
+	height: 150px;
+	border:1px solid #ccc; 
+	padding: 1px;
+}
+.store_head {
+	width: 200px;
+	height: 150px;
+	border:1px solid #ccc; 
+	padding: 1px;
+}
+.pageTitle{
+	width: 100%;
+}
+.webLogo /*网站标志*/ {
+	width: 30%;
+	float: left;
+	margin: 5px 0;
+}
+.searchCon {
+	padding-top: 20px;
+	float: right;
+	width: 50%;
+}
+.searchBg {
+	background-image: url(../images/searchBg.gif);
+	height: 35px;
+	line-height: 35px;
+	float: left;
+	width: 90%;
+	border-left: 1px solid #ccc;
+}
+
+.searchBg input{
+	color: #B5B5B5;
+}
+.searchMenu {
+	border: 0;
+	float: left;
+	cursor: pointer;
+	background-image: url(../images/searchMenu.gif);
+	width: 56px;
+	height: 35px;
+}
+
+
+.loading_msg {
+	position: absolute;
+	padding: 5px;
+	background: none repeat scroll 0 0 rgba(102, 102, 102, 0.3);
+	background: #ccc;
+	z-index: 99999;
+	top: 45%;
+	left: 45%;
+	border-radius: 4px;
+	top: 46%;
+	left: 44%;
+}
+
+.loading {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #ffffff;
+	z-index: 99998;
+	width: 100%;
+	height: 100%;
+}
+
+.loading_msg {
+	position: absolute;
+	padding: 5px;
+	background: none repeat scroll 0 0 rgba(102, 102, 102, 0.3);
+	background: #ccc;
+	z-index: 99999;
+	top: 45%;
+	left: 45%;
+	border-radius: 4px;
+	top: 46%;
+	left: 44%;
+}
+
+.loading-msg_default {
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+	color: #222;
+	padding: 5px 5px 5px 42px;
+	background-color: #FFFFFF;
+	float: left;
+}
+
+.loading_ok {
+	background: #fff url('../icon/32/succ.png') no-repeat scroll 5px 4px;
+}
+
+.loading_tip {
+	background: #fff url('../icon/32/hits.png') no-repeat scroll 5px 4px;
+}
+
+.loading_error {
+	background: #fff url('../icon/32/fail.png') no-repeat scroll 5px 4px;
+}
+
+.loading_alert {
+	background: #fff url('../icon/32/i.png') no-repeat scroll 5px 4px;
+}
+
+.loading_ing {
+	background: #fff url('../images/loading.gif') no-repeat scroll 5px 4px;
+}
+.ajax-loading_overlay {
+     background: #aaaaaa;
+     opacity: .3; filter:Alpha(Opacity=30);
+     display:none;
+     width:100%;
+     height:100%;
+     position:absolute;
+     top:0;
+     left:0;
+     z-index:999998;
+}
+.ajax-loading {
+     display:none;
+    font-size: 12px;
+    height: 0;
+    overflow: visible;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+}
+.ajax-loading .margins {
+    background-color: #000000;
+    display: inline-block;
+    padding: 0.5em 2em;
+    position: relative;
+}
+.ajax-loading .loading-text {
+    background: url("../images/loading.gif") no-repeat;
+    line-height: 24px;
+    padding-left: 2.2em;
+    color:#ffffff;
+}
+/*导航栏*/
+
+.cls {
+	clear: both;
+}
+
+a:focus {
+	outline: none;
+}
+
+#menu ul li a {
+	color: #000;
+	background: transparent url(../images/a_bg_3.jpg) repeat-x left bottom;
+	background-position: left bottom;
+}
+
+#menu ul li span {
+	background: transparent url(../images/a_bg_3.jpg) repeat-x left top;
+	background-position: left top;
+}
+
+#menu {
+	height: 40px;
+	width: 600px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#menu ul {
+	list-style: none;
+	font-size: 1.1em;
+	width: 800px;
+	margin: 15px 0 0;
+	padding: 0;
+}
+
+#menu ul li {
+	overflow: hidden;
+	float: left;
+	height: 40px;
+	width: 114px;
+	display: block;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+#menu ul li a,#menu ul li span {
+	float: left;
+	text-decoration: none;
+	color: #fff;
+	clear: both;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	padding: 10px 0;
+}
+
+#menu ul li a {
+	color: #00b38a;
+}
+
+/*底部*/
+.footBg {
+	width: 100%;
+	margin: auto;
+	line-height: 28px;
+	text-align: center;
+	background-color: #F6F6F6;
+}
+.footBglm {
+	line-height: 28px;
+	background: #00C295;
+	color: #FFF;
+}
+.footBglm a{
+	line-height: 28px;
+	color: #FFF;
+}
+
+@media screen and (max-width:550px) {
+	.container {
+		width: 100%;
+	}
+	.searchCon {
+		display: none;
+	}
+}

@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+.w{width:800px;padding:0;margin:0 auto;zoom:1;}
+.form label,.form input,.form select,.form textarea,.form button,.form .label{float:left;font-size:12px;}
+.form .item{overflow:hidden;zoom:1;}
+.btn-img{cursor:pointer;overflow:hidden;margin:0;padding:0;border:0;text-align:center;}
+.mt,.mc{overflow:hidden;zoom:1;}
+html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,address,big,cite,code,del,em,font,img,ins,small,strong,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend{margin:0;padding:0;}ol,ul{list-style:none;}
+.tab{overflow:hidden;zoom:1;}
+.tab li{float:left;text-align:center;}
+.ftx04,.flk04 a:link,.flk04 a:visited,a.flk04:link,a.flk04:visited{color:#F00;}
+.fl{float:left;}
+.clr{display:block;overflow:hidden;clear:both;height:0;line-height:0;font-size:0;}
+#openStoreDiv .mt{height:33px;background:url(../images/openStore/tit_openStore.jpg) repeat-x 0 -34px;}
+#openStoreDiv .mt h2{float:left;height:33px;padding-left:15px;background:url(../images/openStore/tit_openStore.jpg) no-repeat 0 0;line-height:33px;}
+#openStoreDiv .mt span{float:right;height:33px;line-height:33px;text-align:right;}
+#openStoreDiv .mt b{float:right;width:10px;height:33px;background:url(../images/openStore/tit_openStore.jpg) no-repeat 0 -68px;}
+#openStoreDiv .mc{padding:15px 20px 20px;border:solid #D1D1D1;border-width:0 1px 1px;}
+#openStoreDiv .tab{height:29px;overflow:visible;padding-left:130px;margin-bottom:25px;border-bottom:1px solid #FFCC66;}
+#openStoreDiv .tab li{width:102px;padding-top:3px;height:27px;font-size:14px;text-align:center;line-height:27px;color:#F79100;}
+#openStoreDiv .tab .curr{position:relative;background:url(../images/openStore/bg_regist.jpg) no-repeat 0 -83px;font-weight:bold;z-index:10;color:#a0410a;}
+#openStoreDiv .tab .line{background:url(../images/openStore/bg_shortcut_line.jpg) no-repeat right 7px;}
+#openStoreDiv .tab a:link,#openStoreDiv .tab a:visited{display:block;overflow:hidden;width:74px;height:23px;margin:0 auto;line-height:23px;}
+#openStoreDiv .tab a:hover,#openStoreDiv .tab a:active{background:url(../images/openStore/bg_regist.jpg) no-repeat -167px 0;color:#fff;text-decoration:none;}
+*html #openStoreDiv .tab{overflow:hidden;}
+#openStoreDiv .item{padding-top:5px;height:50px;line-height:26px;}
+#openStoreDiv .item a:link,#openStoreDiv .item a:visited{text-decoration:underline;}
+#openStoreDiv .item_area{height:100px;}
+#openStoreDiv .label{width:100px;text-align:left;font-size:15px;}
+#openStoreDiv .text{width:400px;height:16px;padding:4px 3px;border:1px solid #bbb;font-size:14px;}
+#openStoreDiv .text-code{width:100px;}
+#openStoreDiv .blank{width:16px;height:16px;margin:2px 5px 0;}
+#openStoreDiv .img img{height:26px;margin:0 5px;}
+#openStoreDiv .succeed{background:url(../images/openStore/pwdstrength.gif) no-repeat -105px 0;}
+#openStoreDiv .openSotre-btn-submit{width:166px;height:32px;background:url(../images/openStore/bg_regist.jpg) no-repeat 0 0;font-size:14px;font-weight:bold;color:#fff;}
+#openStoreDiv .highlight1 {
+	border: 1px solid #EFA100;
+	outline: 2px solid #FFDC97;
+	*border: 2px solid #ffcc66;
+	*padding: 3px 2px;
+}
+
+#openStoreDiv .highlight2 {
+	border: 1px solid #f00;
+	outline: 1px solid #FFC1C1;
+	color: #f00;
+}
+
+#openStoreDiv .focus {
+	color: #999;
+	line-height: 22px;
+	*line-height: 20px;
+}
+
+#openStoreDiv .null,#openStoreDiv .error {
+	color: red;
+	line-height: 22px;
+	*line-height: 20px;
+}
+@-moz-document url-prefix(){#openStoreDiv .openSotre-btn-submit{padding-bottom:5px;}}

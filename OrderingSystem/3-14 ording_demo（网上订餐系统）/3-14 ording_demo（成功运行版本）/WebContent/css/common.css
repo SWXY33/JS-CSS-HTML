@@ -1,0 +1,106 @@
+@CHARSET "UTF-8";
+.icon-add_to_folder{background:url(../icon/add_to_folder.png) no-repeat;}
+.grid_layout{
+    width:100%; 
+    table-layout:fixed;
+    background-color: #90B2C6;
+    line-height: 20px;
+}
+.grid_layout .td_left {
+    background-color: #ffffff;
+    text-align: right;
+    padding: 5px;
+}
+.grid_layout  .td_all{
+	background-color: #ffffff;
+	text-align: center;
+}
+.grid_layout .td_right {
+    background-color: #FFFFFF; padding: 5px;
+    vertical-align: top
+}
+.grid_layout_h1 {
+    font-size: 34px;
+    line-height: 2em;
+    text-align: center;
+    padding:0px;
+    margin:0px;
+}
+table.grid_layout .td_node {
+    background-color: #FFFFFF;
+    padding: 5px;
+    height:110px;
+    vertical-align:top;
+    text-align:left;
+}
+
+.g_file_list {
+    width: 100%;
+    overflow:hidden;
+    padding:0px;
+    margin:0px;
+}
+.g_file_list ul {
+    float: left;
+    padding:0px;
+    margin:0px;
+    width: 100%;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+.g_file_list ul li {
+    background: url("../icon/08.png") no-repeat scroll 0 11px;
+    border-bottom: 1px dotted #DBEEE6;
+    float: left;
+    line-height: 28px;
+    *line-height: 25px;
+    overflow:hidden;
+    text-indent:13px;
+    width: 98%;
+    margin:0px 3px 0px 3px;
+    padding-top:4px;
+}
+.g_file_list ul li span {
+    float: right;
+    padding-right:8px;
+    cursor:pointer;
+}
+.g_file_list ul li a {
+    padding: 0 0 0 10px;
+    text-decoration: initial;
+    cursor:pointer;
+    line-height:20px;
+}
+.g_file_list .li {
+    background:none;
+    float:left;
+    width:100px;
+    text-indent: 0px;
+    line-height:0;
+    overflow:hidden;
+    padding:4px 4px 0px 4px;
+    margin:0px 5px 5px 5px;
+    border: 2px solid #cccccc;
+    cursor:pointer;
+}
+.g_file_list .img {
+    width:100px;height:80px;
+    margin-right:5px;
+}
+.g_file_list .close {
+    text-align:right;
+    display:inline-block;
+    padding:0px;
+    height: 12px;
+    line-height: 8px;
+}
+.g_file_list .a {
+    overflow:hidden;
+    text-align:center;
+    display:inline-block;
+    padding: 0;
+    width: 100px;
+}
+.g_file_list_tip{
+    font-size: xx-large;font-weight:900;color:#cccccc;text-align:center;width:98%;
+}

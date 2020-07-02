@@ -1,0 +1,152 @@
+@CHARSET "UTF-8";
+
+.myorder_storeName {
+	font-size: 17px;
+	width: 1200px;
+	height: 30px;
+	margin: 1px;
+	border: 1px solid #ccc;
+}
+
+.order-info-wrapper {
+	float: left;
+	width: 570px;
+	margin: 5px;
+	overflow:auto;
+}
+
+.clearfix {
+	float: left;
+	width: 1200px;
+	margin: 1px;
+	border: 1px solid #ccc;
+	
+}
+
+.fl_address {
+	width: 550px;
+	height: 45px;
+}
+
+.food-name {
+	padding: 10px;
+	float: left;
+	width: 250px;
+	height: 20px;
+	margin: 1px;
+	border: 1px solid #ccc;
+}
+
+.food-price {
+	padding: 10px;
+	text-align: right;
+	float: left;
+	width: 250px;
+	height: 20px;
+	margin: 1px;
+	border: 1px solid #ccc;
+}
+
+.food_list {
+	width: 545px;
+	height: 50px;
+	border: 1px solid #ccc;
+}
+
+.dishes_rap {
+	float: left;
+	width: 545px;
+	margin: 5px;
+	border: 1px solid #ccc;
+}
+
+.address-title {
+	margin: 5px;
+	float: left;
+	width: 250px;
+	height: 30px;
+	float: left;
+}
+
+.new_address {
+	margin: 5px;
+	text-align: right;
+	float: left;
+	width: 250px;
+	height: 30px;
+}
+
+.address-head {
+	float: left;
+	width: 533px;
+	height: 200px;
+	margin: 5px;
+	border: 1px solid #ccc;
+}
+
+.address {
+	float: left;
+	width: 533px;
+	height: 30px;
+	margin: 5px;
+	border: 1px solid #ccc;
+}
+
+.leave-message-short {
+	margin: 10px;
+}
+
+.pay-field {
+	margin: 10px;
+	float: left;
+	width: 533px;
+	height: 40px;
+}
+
+.s-btn {
+	margin: 10px;
+}
+
+.ct-black {
+	margin: 10px;
+} 
+.order-food-name {
+
+	float: left;
+	margin: 10px;
+	width: 240px;
+	height: 30px;	
+}
+.order-food-price {
+	text-align: right;
+	margin: 10px;
+	width: 260px;
+	height: 30px;
+	float: left;
+}
+
+.destination {
+	width: 500px;
+	height: 50px;
+	padding:20px;
+}
+.allprice {
+	padding: 10px;
+	float: left;
+	width: 250px;
+	height: 20px;
+	margin: 1px;
+}
+.allpricenum {
+	padding: 10px;
+	text-align: right;
+	float: right;
+	width: 250px;
+	height: 20px;
+	margin: 1px;
+}
+.order-address-warning {
+    color: #fe4d3d;
+    font-size: 14px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="customer" namespace="/customer" extends="default">
+		<action name="order" class="customerOrder">
+			<result name="businessLogin">/WEB-INF/loginSms.jsp</result>
+			<result name="toStore">/WEB-INF/client/restaurant.jsp</result>
+			<result name="toOrder">/WEB-INF/client/order_preview.jsp</result>
+			<result name="myOrders">/WEB-INF/client/myOrders.jsp</result>
+			<result name="toAddress">/WEB-INF/client/edit_address.jsp</result>
+			<result name="toSendSms">/WEB-INF/client/send_sms.jsp</result>
+			<result name="toHome">/WEB-INF/home.action</result>
+			<result name="toCheckOrder">/WEB-INF/client/check_order.jsp</result>
+		</action>
+		<action name="orderInf" class="orderInfAction">
+		</action>
+	</package>
+</struts>

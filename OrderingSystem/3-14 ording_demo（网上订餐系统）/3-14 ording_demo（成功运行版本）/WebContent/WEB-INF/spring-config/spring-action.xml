@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+			http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+	
+	<bean id="login" class="com.guet.action.LoginAction">
+		<property name="userService" ref="userImpl"></property>
+		<property name="verifyCodeSevice" ref="verifyCodeImpl"></property>
+	</bean>
+	
+	<bean id="register" class="com.guet.action.RegisterAction">
+		<property name="userService" ref="userImpl"></property>
+	</bean>
+	
+	<bean id="upload" class="com.guet.action.UploadAction">
+		<property name="fileService" ref="fileImpl"></property>
+	</bean>
+	
+	<bean id="aboutMe" class="com.guet.action.business.AboutMeAction">
+	    <property name="userService" ref="userImpl"></property>
+	    <property name="fileService" ref="fileImpl"></property>
+	</bean>
+	
+	<bean id="openStore" class="com.guet.action.business.OpenStoreAction">
+		<property name="storeService" ref="storeServiceImpl"></property>
+		<property name="storeMenuService" ref="storeMenuServiceImpl"></property>
+	</bean>
+	
+	<bean id="sysCombox" class="com.guet.action.combox.ComboxAction">
+		<property name="comboxService" ref="comboxServiceImpl"></property>
+	</bean>
+	
+	<bean id="customerOrder" class="com.guet.action.customer.CustomerOrderAction">
+		<property name="storeMenuService" ref="storeMenuServiceImpl"></property>
+		<property name="orderService" ref="orderImpl"></property>
+	</bean>
+	
+	<bean id="orderInfAction" class="com.guet.action.customer.OrderInfAction">
+		<property name="orderService" ref="orderImpl"></property>
+	</bean>
+	
+	<bean id="busOrderInfAction" class="com.guet.action.business.OrderInfAction">
+		<property name="orderService" ref="orderImpl"></property>
+	</bean>
+</beans>
