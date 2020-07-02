@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>度本科技后台管理系统</title>
+<link  href="../css/Login.css" rel="stylesheet" type="text/css">
+
+<script>
+function openwindow() { 
+window.open ("Forget.html", "忘记密码", "height=800, width=800,top=100,left=600") }
+function checkUser(){
+   var result = document.getElementById("loginName").value;
+   var password = document.getElementById("loginPwd").value;
+
+   if(result == ""  ){
+     alert("用户名不能为空");
+     return false;
+   }
+   if(password == ""  ){
+    alert("密码不能为空");
+     return false;
+   }
+  document.loginform.action = "Home.html";
+  document.loginform.submit();
+}
+</script>
+</head>
+
+<body>
+<div class="container" >
+  <div class="loginForm">
+    <form action="" method="post" id="LoginDiv" name="loginform">
+    <div class="Logo">
+        <div class="Logo"> <img src="../images/1.png" width="335" height="132" longdesc="../images/1.jpg" /> </div>
+        <div class="SystemName"><b>度 本 科 技 后 台 管 理 系 统</b></div>
+        <div class="LoginInput">
+          <input name="UserloginName" type="text" class="login-infos" id="loginName" placeholder="请输入账号"/>
+        </div>
+        <div class="tb"></div>
+        <div class="LoginInput">
+          <input name="UserloginPwd" type="text" class="login-infos" id="loginPwd" placeholder="请输入密码"/>
+        </div> 
+        <div class="tb">
+        <a class="forget" href="#" onclick="openwindow()">忘记密码</a></div>
+        <div class="LoginInput">
+           <input type="submit" value="登    录" class="login-i" onclick="checkUser()"/> 
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
