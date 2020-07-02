@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@keyframes grow-padding-left {
+  from {
+    padding-left: 0;
+  }
+}
+@keyframes grow-padding-right {
+  from {
+    padding-right: 0;
+  }
+}
+h1 {
+  text-align: center;
+}
+
+.areaData div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 650px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul li {
+  margin-bottom: 4px;
+  border-radius: 4px;
+  width: 300px;
+}
+ul em {
+  display: inline-block;
+  width: 150px;
+  font-style: normal;
+}
+ul span {
+  width: 150px;
+  display: inline-block;
+}
+
+
+.style-2 em {
+  text-align: right;
+  padding: 8px 8px 8px 0;
+}
+.style-2 span {
+  color: white;
+  background: cornflowerblue;
+  padding: 8px;
+  width: 30px;
+  border-radius: 4px;
+  animation: grow-padding-right 5s;
+}
+
+
+.mapData{
+	width:1178px;
+	height:430px;
+
+	border: 1px solid #ccc;
+	border-radius: 0px 0px 10px 10px;
+}
+.areaData{
+	width:720px;
+	height:430px;
+	float:left;;
+	}
+.diviceaData{
+	width:450px;
+	height:430px;
+	float:right;
+	}
+.center{
+    position: relative;
+    width:1180px;
+    height:480px;
+	margin:5px;
+	float:left;
+    background:#FFF;  
+	border: 1px solid #ccc;
+	border-radius: 10px;        
+}
+.distribution{
+	width:1130px;
+	height:45px;
+	font-size:20px;
+	background:#FFF;
+	float:left;
+	text-align:left;
+	border-radius: 10px; 
+ }
+ .refresh{
+	line-height:45px;
+	width:50px;
+	height:45px;
+	background:#FFF;
+	float:left;
+	text-align:left;
+	border-radius: 10px; 
+	cursor: pointer;
+ }
+ .mapData{
+	width:1178px;
+	height:430px;
+	border: 1px solid #c00;
+	border-radius: 0px 0px 10px 10px;
+}
+

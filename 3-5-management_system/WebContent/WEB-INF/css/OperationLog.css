@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+.xx input {
+	
+	height:40px;
+    padding:5px;
+	border: 1px solid #ccc;
+}
+.type-i{
+	padding:8px;
+	border: 1px solid #ccc;
+}
+
+
+
+
+
+
+.xx {
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 1600px;
+	height: 800px;
+	font-size: 25px;
+	line-height:20px;
+	border: 1px solid #ccc;
+	
+}
+
+#aa .span-style {
+	text-align:center;
+	
+}
+
+#aa {
+	width: 1594px;
+	height: 50px;
+	margin: 2px;
+	text-align:left;
+	line-height:50px;
+	float: left;
+	border: 1px solid #ccc;
+	
+}
+
+
+#aa div {
+	float: left;
+	margin: 0 30px 0 0;
+	font-size: 25px;
+	line-height:50px;
+}
+div.bb {
+	float: left;
+	width: 1600px;
+	height: 500px;
+	text-align:left;
+	line-height:50px;
+	border: 1px solid #ccc;
+}
+
+
+
