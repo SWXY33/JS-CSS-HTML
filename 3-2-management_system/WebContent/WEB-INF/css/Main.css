@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container{
+    width: 1900px;
+	height:918px;
+	text-align:center;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	line-height: 45px;
+	margin:0 auto; /* 侧边的自动值与宽度结合使用，可以将布局居中对齐 */
+}
+.displayArea{
+	width:1640px;
+	height:918px;
+	float:right;
+	border: 1px solid #ccc;
+	margin:1px;
+	overflow: hidden;
+}

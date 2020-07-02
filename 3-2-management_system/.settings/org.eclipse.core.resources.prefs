@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/views/Addbind.jsp=UTF-8
+encoding//WebContent/WEB-INF/views/Switch.jsp=UTF-8
+encoding//WebContent/WEB-INF/views/testPage.jsp=UTF-8
+encoding//WebContent/login.jsp=UTF-8
+encoding//src/com/duben/springmvc/controller/AddbindController.java=UTF-8
+encoding//src/com/duben/springmvc/controller/ModifyController.java=UTF-8
+encoding//src/com/duben/springmvc/controller/SwitchController.java=UTF-8
+encoding//src/com/duben/springmvc/entity/DeviceVo.java=UTF-8
