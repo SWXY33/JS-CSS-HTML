@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* CSS Document */
+.xx input {
+	
+	height:40px;
+    padding:5px;
+	border: 1px solid #ccc;
+}
+.type-i{
+	padding:8px;
+	border: 1px solid #ccc;
+}
+
+
+
+
+
+
+.xx {
+	margin-top: 30px;
+	margin-left: 30px;
+	width: 1680px;
+	height: 500px;
+	font-size: 25px;
+	line-height:20px;
+	border: 1px solid #ccc;
+	
+}
+
+#aa .span-style {
+	text-align:center;
+	
+}
+
+#aa {
+	width: 980px;
+	height: 50px;
+	margin: 2px;
+	text-align:left;
+	line-height:50px;
+	float: left;
+	border: 1px solid #ccc;
+	
+}
+
+
+#aa div {
+	float: left;
+	margin: 0 30px 0 0;
+	font-size: 25px;
+	line-height:50px;
+}
+#aa div.bb {
+	float: left;
+	width: 400px;
+	height: 50px;
+	text-align:left;
+	line-height:50px;
+	border: 1px solid #ccc;
+}
+#aa div.cc {
+	width: 80px;
+	height: 50px;
+	text-align:left;
+	line-height:50px;
+	float:right;
+	border: 1px solid #ccc;
+}
+#aa div.settime input{
+	width:25px;
+	height:25px;
+}
+#aa div.settime{
+    width: 460px;
+	height: 50px;
+	float:right;
+	text-align:left;
+}
+#aa select.setTime{
+	width: 80px;
+	height: 40px;
+	font-size:19px;
+}
+
+a{
+	text-decoration:none;
+	color: red;
+}
+#toggle-button{ 
+        display: none; 
+    }
+    .button-label{
+        position: relative;
+        display: inline-block;
+        width: 80px;
+        background-color: #7f7f7f;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    .circle{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+    .button-label .text {
+        line-height: 30px;
+        font-size: 18px;
+
+        /*
+        用来阻止页面文字被选中，出现蓝色
+        可以将下面两行代码注释掉来查看区别
+        */
+       -webkit-user-select: none;
+       user-select: none;
+    }
+    .on { 
+        color: #fff; 
+        display: none; 
+        text-indent: 10px;
+    }
+    .off { 
+        color: #fff; 
+        display: inline-block; 
+        text-indent: 53px;
+    }
+    .button-label .circle{
+        left: 0;
+        transition: all 0.3s;/*transition过度，时间为0.3秒*/
+    }
+
+    /*
+    以下是checked被选中后，紧跟checked标签后面label的样式。
+    例如：div+p 选择所有紧接着<div>元素之后的<p>元素
+    */
+    #toggle-button:checked + label.button-label .circle{
+        left: 50px;
+    }
+    #toggle-button:checked + label.button-label .on{ 
+        display: inline-block; 
+    }
+    #toggle-button:checked + label.button-label .off{ 
+        display: none; 
+    }
+    #toggle-button:checked + label.button-label{
+        background-color: #0080ff;
+    }
+
+

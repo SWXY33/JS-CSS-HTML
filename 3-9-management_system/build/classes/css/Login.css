@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	
+}
+.container {
+	background-image:url(../images/LoginBackground.jpg);
+	background-size:100%;
+	width: 1518px;
+	height:535px;
+	text-align:center;
+	padding:200px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	margin:0 auto; /* 侧边的自动值与宽度结合使用，可以将布局居中对齐 */
+}
+.loginForm {
+	background-color:#FFF;
+	opacity:0.7;
+	text-align:center;
+	width: 500px;
+	height: 400px;
+	margin: 10px auto;
+	overflow: hidden;
+	font-size: 16px;
+	text-align: center;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
+.LoginInput{
+	width: 400px;
+	height: 48px;
+	padding:10px;
+	border-radius: 10px;
+	margin: 1px auto;
+
+}
+.tb{
+	width: 450px;
+	height: 20px;
+	text-align:right;
+
+}
+    
+	
+input[type="text"],#btn1{
+  box-sizing: border-box;
+  text-align:left;
+  font-size:1em;
+  height:3em;
+  padding:20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  -web-kit-appearance:none;
+  -moz-appearance: none;
+  display:block;
+  outline:0;
+  text-decoration:none;
+  width:100%;
+}
+
+.login-i{
+	width: 400px;
+	height: 50px;
+	font-size:20px;
+    color:#FFF;
+	background-color:#F00;
+	border: 1px solid #c00;
+	border-radius: 10px;
+}

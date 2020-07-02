@@ -1,0 +1,502 @@
+@charset "utf-8";
+/* CSS Document */
+
+.Navbar a:link{text-decoration:none; color:#FFF;}/* 指正常的未被访问过的链接*/
+.Navbar a:visited{text-decoration:none; color:#FFF;}/*指已经访问过的链接*/
+.Navbar a:hover{text-decoration:none;color:#FFF;}/*指鼠标在链接*/
+.Navbar a:active{text-decoration:none;color:#FFF;}/* 指正在点的链接*/
+/
+.displayArea{
+	width:1625px;
+	height:918px;
+	float:right;
+	border: 1px solid #ccc;
+	margin:1px;
+	overflow: hidden;
+}
+.mapData{
+	width:1178px;
+	height:430px;
+	border: 1px solid #c00;
+	border-radius: 0px 0px 10px 10px;
+}
+	
+.list{
+	width:1640px;
+	height:920px;
+	float:right;
+	border: 1px solid #F00;
+	margin:1px;
+	overflow: hidden;
+}
+.body1{
+    background:#f2f2f2;
+}
+.center{
+    position: relative;
+    width:1180px;
+    height:480px;
+	margin:5px;
+	float:left;
+    background:#FFF;  
+	border: 1px solid #ccc;
+	border-radius: 10px;        
+}
+.distribution{
+	line-height:45px;
+	width:1130px;
+	height:45px;
+	font-size:20px;
+	background:#FFF;
+	float:left;
+	text-align:left;
+	border-radius: 10px; 
+ }
+ .refresh{
+	width:50px;
+	height:45px;
+	background:#FFF;
+	float:left;
+	text-align:left;
+	border-radius: 10px; 
+	cursor: pointer;
+ }
+ .refresh1{
+	width:50px;
+	height:45px;
+	background:#C00;
+	float:left;
+	text-align:left;
+	border-radius: 10px
+	cursor: pointer;
+ }
+ 
+ .refresh2{
+	width:50px;
+	height:45px;
+	background:#FFF;
+	float:left;
+	text-align:left;
+	border-radius: 10px;
+	cursor: pointer;
+ }
+.footer{
+	padding:2px;
+	width:1628px;
+    height:415px;
+	float:right;
+    background:#FFF;
+	margin:5px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
+.diviceInf{
+	line-height:45px;
+	width:1575px;
+	height:45px;
+	float:left;
+	font-size:20px;
+    background:#FFF;
+	text-align:left;
+	border-radius: 10px;
+}
+.right{
+    height:480px;
+    width:420px;
+	margin:5px;
+    float: right;               
+    background:#C00;
+	border-radius: 10px;
+}
+.calendar{
+	line-height:45px;
+	width:365px;
+	height:45px;
+	font-size:20px;
+	background:#C00;
+	float:left;
+	color:#FFF;
+	text-align:left;
+	border-radius: 10px;
+}
+.calendar1{
+            margin: 1px;
+            width: 418px;
+            height: 430px;
+            background: white;
+			border: 1px;
+            box-shadow: 0px 1px 1px rgba(0,0,0,.1);
+			border-radius: 0px 0px 8px 8px;
+        }
+.title1{
+            height: 80px;
+			width:418px;
+			background:#C00;
+			color:#000;
+			float:left;
+            border-bottom: 1px solid rgba(0,0,0,.1);
+            position: relative;
+            text-align: center;
+			
+        }
+		.year{
+			width:50px;
+			height:50px;
+			float:left;
+			line-height:60px;
+			margin:5px;
+		}
+	    .year1{
+			width:10px;
+			height:60px;
+			line-height:60px;
+			padding:5px 0 0 0;
+			float:left;
+			color:#FFF;
+			
+			
+		}
+		.month{
+			width:80px;
+			height:50px;
+			float:left;
+			margin:5px;
+		}
+ 
+        #calendar-month{
+            font-size: 35px;
+            text-transform: uppercase;
+			color:#FFF;
+            font-family: Arial, Helvetica, sans-serif;
+			text-align:right;
+        }
+ 
+        #calendar-year{
+            font-size: 15px;
+			color:#FFF;
+			text-align:right;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
+		
+ 
+        #pre{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+			font-size: 40px;
+            text-decoration:none;
+            color:#FFF;
+            /*没规定大小时，图片显示 0X0*/
+            width: 60px;
+            height: 70px;
+            
+        }
+ 
+        #next{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+			font-size: 40px;
+			color:#FFF;
+            text-decoration:none;
+            width: 60px;
+            height: 70px;
+        }  
+        .body-list{
+	        height:80px;
+         }
+        .body-list ul{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            width: 100%;
+            box-sizing: border-box;
+      
+        }  
+ 
+        .body-list ul li{
+            list-style: none;
+            display: block;
+            width: 14.2%;
+            float: left;
+            height: 55px;
+            line-height: 55px;
+            box-sizing: border-box;
+            text-align: center;
+            
+        }
+ 
+ 
+
+ 
+        .lightgrey{ /*浅灰色显示过去的日期*/
+	        color:#a8a8a8;
+			height:50px;
+        }   
+        .darkgrey{ /*深灰色显示将来的日期*/
+	        color:#565656;
+        }
+ 
+        /*日期当天用绿色背景绿色文字加以显示*/
+        .greenbox{
+	        border: 1px solid #f00;
+	        background-color:#FFB5CB;
+	        border-radius: 8px;
+        }
+.diviceType1{
+	width: 280px;
+	height: 345px;
+	float: left;
+	background-color: #D42218;
+	border: 1px solid #c00;
+	border-radius: 20px 5px 5px 5px;
+	margin: 10px 10px 10px 30px;
+}
+.diviceType2{
+	width: 280px;
+	height: 345px;
+	float: left;
+	background-color: #FFF45C;
+	border: 1px solid #FF6;
+	border-radius: 20px 5px 5px 5px;
+	margin: 10px 10px 10px 30px;
+}
+.diviceType3{
+	width:280px;
+	height:345px;
+	float:left;
+	background-color:#0CF;
+	border: 1px solid #0CF;
+	border-radius: 20px 5px 5px 5px;
+	margin:10px 10px 10px 30px;
+}
+.diviceType4{
+	width:280px;
+	height:345px;
+	float:left;
+	background-color:#394;
+	border: 1px solid #394;
+	border-radius: 20px 5px 5px 5px;
+	margin:10px 10px 10px 30px;
+}
+.diviceType5{
+	width: 280px;
+	height: 345px;
+	float: left;
+	background-color: #9082BD;
+	border: 1px solid #9082BD;
+	border-radius: 20px 5px 5px 5px;
+	margin: 10px 10px 10px 30px;
+}
+.On-Off{
+	width: 258px;
+	float: left;
+
+	height::80px;
+	padding: 10px;
+	background-color: #D42218;
+	font-size: 30px;
+	text-height: auto;
+	border-radius: 20px 5px 0px 0px;
+	border: 1px solid #c00;
+	height: 80px;
+}
+.on-off-img{
+	width: 90px;
+	height: 78px;
+	float: left;
+	padding: 1px;
+	border: 1px solid #D42218;
+	margin: 1px;
+}
+
+.on-off-name{
+	width: 100px;
+	height: 30px;
+	text-align: left;
+	float: right;
+	padding: 20px;
+	margin: 1px;
+	border: 1px solid #D42218;
+}
+.on-off-inf{
+	width: 260px;
+	height:198px;
+	padding: 10px;
+	font-size: 28px;
+	float:left;
+	text-align: left;
+	border-radius: 0px 0px 5px 5px;
+}
+.sum{
+    font-size: 18px;
+}
+.online{
+	font-size: 18px;
+	}
+.onlinesum{
+	padding:15px;
+	font-size: 100px;
+	text-align:center;
+}
+.Socket{
+	width: 258px;
+	float: left;
+
+
+	height::80px;
+	padding: 10px;
+	background-color: #FFF45C;
+	font-size: 30px;
+	text-height: auto;
+	border-radius: 20px 5px 0px 0px;
+	border: 1px solid #FFF45C;
+	height: 80px;
+}
+.socket-img{
+	width: 90px;
+	height: 78px;
+	float: left;
+	padding: 1px;
+	border: 1px solid #FFF45C;
+	margin: 1px;
+}
+
+.socket-name{
+	width: 100px;
+	height: 30px;
+	text-align: left;
+	float: right;
+	padding: 20px;
+	margin: 1px;
+	border: 1px solid #FFF45C;
+}
+.socket-inf{
+	width: 260px;
+	height:198px;
+	padding: 10px;
+	font-size: 28px;
+	float:left;
+	text-align: left;
+	border-radius: 0px 0px 5px 5px;
+}
+.Curtain{
+	width: 258px;
+	float: left;
+	height::80px;
+	padding: 10px;
+	background-color:#0CF;
+	font-size: 30px;
+	text-height: auto;
+	border-radius: 20px 5px 0px 0px;
+	border: 1px solid #0CF;
+	height: 80px;
+}
+.curtain-img{
+	width: 90px;
+	height: 78px;
+	float: left;
+	padding: 1px;
+	border: 1px solid #0CF;
+	margin: 1px;
+}
+
+.curtain-name{
+	width: 100px;
+	height: 30px;
+	text-align:left;
+	float: right;
+	padding: 20px;
+	margin: 1px;
+	border: 1px solid #0CF;
+}
+.curtain-inf{
+	width: 260px;
+	height:198px;
+	padding: 10px;
+	font-size: 28px;
+	float:left;
+	text-align: left;
+	border-radius: 0px 0px 5px 5px;
+}
+
+.Router{
+	width: 258px;
+	float: left;
+	height::80px;
+	padding: 10px;
+	background-color:#394;
+	font-size: 30px;
+	text-height: auto;
+	border-radius: 20px 5px 0px 0px;
+	border: 1px solid #394;
+	height: 80px;
+}
+.router-img{
+	width: 90px;
+	height: 78px;
+	float: left;
+	padding: 1px;
+	border: 1px solid #394;
+	margin: 1px;
+}
+
+.router-name{
+	width: 100px;
+	height: 30px;
+	text-align:left;
+	float: right;
+	padding: 20px;
+	margin: 1px;
+	border: 1px solid #394;
+}
+.router-inf{
+	width: 260px;
+	height:198px;
+	padding: 10px;
+	font-size: 28px;
+	float:left;
+	text-align: left;
+	border-radius: 0px 0px 5px 5px;
+}
+
+.PAS{
+	width: 258px;
+	float: left;
+	height::80px;
+	padding: 10px;
+	background-color: #9082BD;
+	font-size: 30px;
+	text-height: auto;
+	border-radius: 20px 5px 0px 0px;
+	border: 1px solid #9082BD;
+	height: 80px;
+}
+.pas-img{
+	width: 90px;
+	height: 78px;
+	float: left;
+	padding: 1px;
+	border: 1px solid #9082BD;
+	margin: 1px;
+}
+
+.pas-name{
+	width: 120px;
+	height: 30px;
+	text-align: left;
+	float: right;
+	padding: 18px 2px 2px 0px;
+	margin: 1px;
+	border: 1px solid #9082BD;
+}
+.pas-inf{
+	width: 260px;
+	height:198px;
+	padding: 10px;
+	font-size: 28px;
+	float:left;
+	text-align: left;
+	border-radius: 0px 0px 5px 5px;
+}

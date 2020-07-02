@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>度本科技后台管理系统<主页></title>
+        <link href="../css/Home.css" rel="stylesheet" type="text/css">
+        <link href="../css/Menu.css" rel="stylesheet" type="text/css">
+        <link href="../css/On-OffDivice.css" rel="stylesheet" type="text/css">
+		<script src="../../scr/jquery-3.4.1.min.js"></script>
+    </head>
+    <script>
+		$(function(){
+    	$('.nav').on('click','li',function(){
+    		$(this).addClass('clickstyle');
+    		$(this).siblings().removeClass('clickstyle');
+    	})
+	})
+$(function(){
+		$(".nav li").click(function(){//获取点击事件的对象
+		var divShow = $(".displayArea").children('.list');//获取要显示或隐藏的对象
+		if (!$(this).hasClass('selected')) {//判断当前对象是否被选中，如果没选中的话进入if循环
+			var index = $(this).index();//获取当前对象的索引
+			$(this).addClass('selected').siblings('li').removeClass('selected');//当前对象添加选中样式并且其同胞移除选中样式；
+			$(divShow[index]).show();//索引对应的div块显示
+            $(divShow[index]).siblings('.list').hide();//索引对应的div块的同胞隐藏
+			}
+		});
+		});	
+		
+		
+     </script>
+    <body>
+    <div class="container">
+         <div class="left">
+                <div class="logo"><img src="../images/2.png" width="248" height="85"></div>
+                <form id="form0" ation="" method="get" name="UserInf">
+                <div class="LoginInf">
+                <div class="LoginImg" id="Login-img">
+                <span class="UploadHead"> <a href="#" target="_blank">
+                <img src="../images/no-head.jpg" width="100" height="100"></a></span>
+                </div>
+                <div class="LoginInformation">
+                <div class="login-div-name">
+                <td class="UserName"><label for="loginName">姓 名: </label> </td>
+                <td class="">陆 珊 莉</td>
+                </div>
+                <div class="login-div-job">
+                <td class="UserJob"> <label for="userjob">职 位: </label>
+                <td class="">Web前端</td></div>
+                <div class="login-div-userid">
+                <td class=""><label for="userid"> I D : </label>
+                <td class=""> 000000000</td></div>
+                </div>
+                </div>
+               </form>
+               <ul class="nav">
+               <li class="selected"><div class="Navbar"><a href="MainPage.html">首页 MainPage &nbsp;</a></div></li>
+               <li><div class="Navbar"><a href="On-Off.html">开关 On-Off &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div></li>
+               <li><div class="Navbar"><a href="Socket.html">插座 Socket &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div></li>
+               <li><div class="Navbar"><a href="Curtain.html">窗帘 Curtain &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div></li>
+               <li><div class="Navbar"><a href="Router.html">路由 Router &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div></li>
+               <li><div class="Navbar"><a href="PAS.html">新风系统 PAS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div></li></ul>
+               </div><!-- left-->
+          <div class="displayArea">
+          <div class="on-offDivice">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>插座管理</b></div>
+          <a href="#" target="_blank"><img src="../icon/refresh.png" width="45" height="45" /> </a><img src="../icon/redline.png" width="1680" height="3" /> 
+          <div class="on-offInf">
+          <div class="operationDiv">
+          <input name="" value="＋ 新增" class="add-i" type="button" />
+          <input name="" value="▶启动" class="start-i" type="button" />
+          <input name="" value="■ 停止" class="stop-i" type="button" />
+          <input name="" value="۞ 配置" class="config-i" type="button" />
+          <input name="" value="× 删除" class="delete-i" type="button" />
+          <div class="SearchText">
+          <input name="search" type="text" class="search-text" placeholder="请输入设备ID/MAC" /></div>
+          <input name="" value="◎ 搜索" class="search-i" type="button" />
+          </div>
+          <div class="diviceInfTitle">
+          <ul>
+          <li>设备ID</li><li>设备MAC</li><li>状态</li><li>定时情况</li><li>绑定用户</li><li>是否执行定时</li><li>设备型号</li><li>操作</li></ul>
+          </div>
+          <div class="diviceInfArea">
+          <ul id="diviceInformation">
+          </ul>
+          </div>
+          </div>
+               
+               
+               
+         </div><!--container-->
+    </body>
+</html>

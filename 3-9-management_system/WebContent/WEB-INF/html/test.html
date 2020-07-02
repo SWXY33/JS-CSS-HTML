@@ -1,0 +1,120 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+    <meta charset="utf-8" />
+    <title>测试</title>
+    <style>
+pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+.string { color: green; }
+.number { color:#C0F; }
+.boolean { color: blue; }
+.null { color:#90F; }
+.key { color: red; }
+</style>
+<script type="text/javascript">
+function syntaxHighlight(json) {
+        if (typeof json != 'string') { 
+            json = JSON.stringify(json, undefined, 2);         } 
+        json = json.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>'); 
+        return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function(match) {
+            var cls = 'number'; 
+            if (/^"/.test(match)) {
+                if (/:$/.test(match)) { 
+                    cls = 'key';
+                } else {
+                    cls = 'string';
+                }
+            } else if (/true|false/.test(match)) {
+                cls = 'boolean';
+            } else if (/null/.test(match)) { 
+                cls = 'null'; 
+            }
+            return '<span class="' + cls + '">' + match + '</span>';
+        });
+    }
+</script> 
+</head>
+<body>
+<pre id="result">
+</pre>
+<script type="text/javascript">
+
+    var songResJson={  
+      "deviceMac": "5ccf7f78c949",
+      "brandMode": "SWITCH_TWO",
+      "devicetype": "switch",
+      "connectionState": "0",
+      "wifiMac": "7062b8849e84",
+      "deviceVersion": "v1000",
+      "oneTimingDataLists": [
+        {
+          "week": "0",
+          "state": "0",
+          "openstate": "1",
+          "closestate": "1",
+          "opentime": "11:59",
+          "closetime": "11:58"
+        },
+        {
+          "week": "1",
+          "state": "0",
+          "openstate": "1",
+          "closestate": "1",
+          "opentime": "10:58",
+          "closetime": "12:01"
+        },
+        {
+          "week": "2",
+          "state": "0",
+          "openstate": "1",
+          "closestate": "1",
+          "opentime": "17:01",
+          "closetime": "13:04"
+        },
+        {
+          "week": "3",
+          "state": "0",
+          "openstate": "1",
+          "closestate": "1",
+          "opentime": "12:01",
+          "closetime": "10:59"
+        },
+        {
+          "week": "4",
+          "state": "0",
+          "openstate": "1",
+          "closestate": "1",
+          "opentime": "11:35",
+          "closetime": "12:35"
+        },
+        {
+          "week": "5",
+          "state": "0",
+          "openstate": "1",
+          "closestate": "1",
+          "opentime": "13:35",
+          "closetime": "12:35"
+        },
+        {
+          "week": "6",
+          "state": "0",
+          "openstate": "1",
+          "closestate": "1",
+          "opentime": "08:36",
+          "closetime": "12:36"
+        }
+      ] 
+ 
+        }
+ 
+        document.getElementById('result').innerHTML = syntaxHighlight(songResJson);
+ 
+ 
+ 
+    // $('#result').html(syntaxHighlight(songResJson));
+ 
+</script>
+ 
+ 
+ 
+</body></html>
