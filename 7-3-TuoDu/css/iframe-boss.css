@@ -1,0 +1,17 @@
+.content-bottom-l{
+	margin-top: 20px;
+	float: left;
+	width: 71%;
+	height: 300px;
+	line-height: 25px;
+}
+.content-bottom-c{
+	margin: 20px;
+	float: left;
+	width: 24%;
+	height: 300px;
+}
+.content-bottom-c img{
+	width: 100%;
+	height:auto ;
+}

@@ -1,0 +1,63 @@
+@charset "utf-8";
+* {margin: 0;padding: 0;font-family: "microsoft yahei";color: #000;}
+img{display: block;}
+ul {list-style: none;}
+.head a{text-decoration:none;cursor:pointer;outline:none}
+body{}
+.container{margin:0 auto;width: 100%;}
+.block{padding: 20px 0;}
+.content{
+/* 	border: 1px solid #CCCCCC; */
+	width: 60%;
+	height: 850px;
+	margin-left: 20%;
+}
+.contactus{
+	height: 50px;
+	margin-top: 20px;
+	width: 100%;
+}
+.tel{
+	float: left;
+	width: 5%;
+}
+.tel-1{
+	margin-left: 5px;
+	line-height: 50px;
+	float: left;
+	width: 15%;
+}
+.email{
+	margin-left: 150px;
+	float: left;
+	width: 5%;
+}
+.email-1{
+	margin-left: 5px;
+	line-height: 50px;
+	float: left;
+	width: 15%;
+}
+.address{
+	width: 100%;
+	margin-top: 40px;
+    float: left; 
+	height: 50px;
+}
+.address-1{
+	line-height: 50px;
+	float: left;
+	height: 80px;
+    width: 80%;
+}
+.address-2{
+	float: left;
+	margin-top: 20px;
+	width: 100%;
+}
+.address-2 img{
+	margin-top: 20px;
+	width: 100%;
+}
+
+	

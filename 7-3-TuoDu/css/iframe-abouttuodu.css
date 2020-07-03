@@ -1,0 +1,26 @@
+.T1{
+	margin-top: -10px;
+	font-size: 50px;
+	color: #cbcbcb;
+
+}
+*{
+	font-family: "microsoft yahei";
+
+}
+.T2{
+	font-size: 30px;
+	margin-top: -50px;
+
+}
+.T3{
+	color: #dfc558;
+	font-size: 30px;
+	margin-top: -30px;
+}
+.T4{
+	line-height: 25px;
+}
+.content-bottom img{
+	width: 100%;
+}
