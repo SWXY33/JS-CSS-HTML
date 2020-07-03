@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" type="image/x-icon" href="imgs/icon.ico" />
+<meta name="viewport"content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>拓度国际投资集团</title>
+<link rel="stylesheet" type="text/css" href="css/head.css">
+<link rel="stylesheet" type="text/css" href="css/aboutus.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/about.js"></script>
+<script>
+	$(function(){//默认iframe加载关于拓度的内容
+	     $("#a1").parent().addClass("clicka1");
+	     $("#iFrame").attr("src","iframe-abouttuodu.html").ready();    
+	    });
+</script>
+</head>
+
+<body>
+<div class="container">
+<!-- 导航条 -->
+<div class="head">
+  <div class="navbox"> 
+	 <!-- 侧边栏菜单 -->
+	 <div class="sidenav">
+		<img src="imgs/logo.png"/>
+	 </div>
+	 <!-- 主菜单 -->
+	 <div class="nav headrg">
+		<ul class="nav_pc">
+		   <li>
+			  <a class="f_a" href="tuodu.html">首页</a>
+			  <div class="s_navbox">
+				 <div class="s_a"></div>
+			  </div>
+		   </li>
+		   <li>
+			  <a class="f_a" href="aboutus.html">关于我们</a>
+		   </li>
+		   <li> 
+			  <a class="f_a" href="#">团队管理</a>
+		   </li>
+		   <li> 
+			  <a class="f_a" href="#">投资公司</a>
+		   </li>
+		   <li> 
+			  <a class="f_a" href="#">联系我们</a>
+		   </li>
+		   <li>
+			  <a href="#"><img class="chinese" src="imgs/chinese.png" /></a>
+			  <a href="#"><img class="english" src="imgs/english.png" /></a>
+		   </li>
+		   		
+		</ul>
+	 </div>
+  </div>
+</div>
+
+<!-- 手机端导航--开始 -->
+<div class="m_img">
+  <div class="headlf">
+	 <a href="tuodu.html"> <img class="m_logo" src="imgs/logo.png" /></a>
+  </div>
+  <div class="headrg">
+	 <a href="javascript:;" class="a_js"> <img class="m_menuimg" src="imgs/m_menuimg.png" /></a>
+  </div>
+</div>
+<div class="m_nav">
+  <div class="closecover a_closed"></div>
+  <div class="closeicon">
+	 <a href="javascript:;" class="a_closed"> <img src="imgs/icon_menu_close.png" width="22" /></a>
+  </div>
+  <div class="m_navList">
+	 <ul>
+		<li>
+		   <div class="m_f_a">
+			  <a href="tuodu.html">首页</a>
+			  <i></i>
+		   </div>
+		   <div class="m_s_nav"></div>
+		</li>
+		<li> 
+		   <div class="m_f_a">
+			  <a href="aboutus.html">关于我们</a>
+			  <i></i>
+		   </div>
+		   
+		</li>
+		<li> 
+		   <div class="m_f_a">
+			  <a href="#">管理团队</a>
+			  <i></i>
+		   </div>
+		</li>
+		<li>
+		   <div class="m_f_a">
+			  <a href="#">投资公司</a>
+			  <i></i>
+		   </div>
+		</li>
+		<li> 
+		   <div class="m_f_a">
+			  <a href="class.html">联系我们</a>
+			  <i></i>
+		   </div>
+		   
+		</li>
+		<li>
+			<div class="m_f_a">
+				<a href="#"><img src="imgs/chinese.png" /></a>
+			</div>
+		</li>
+		<li>
+			<div class="m_f_a">
+				<a href="#"><img src="imgs/english.png" /></a>
+			</div>
+		</li>
+	 </ul>
+  </div>
+</div>
+<!-- 手机端导航--结束 -->
+
+<!--轮播部分-->
+<div class="slider">
+  <div id="slideBox" class="slideBox">
+	 <div class="hd"><!--轮播条 -->
+		<ul>
+		   <li></li>
+		</ul>
+	 </div>
+	 <div class="bd"><!--轮播图 -->
+		<ul>
+		   <li><img src="imgs/aboutus/banner.png" /></li>
+		</ul>
+	 </div>
+  </div>
+</div>
+<div class="content">
+    <div class="content-top">
+		<div class="content-top-img"><img src="imgs/aboutus/主页图标.png" /></div>
+		<div class="content-top-title">拓度国际 > 关于我们</div>
+		<div class="content-top-right"><div><a href="#" id="a1" name="iframe-abouttuodu.html" >关于拓度</a></div></div>
+		<div class="content-top-right"><div><a href="#" id="a2" name="iframe-boss.html" >董事长</a></div></div>
+	</div>
+	
+	<div class="content-bottom">
+		<div class="content-bottom-l">
+			<iframe class="if1"  id="iFrame"  src="" width="100%" height="550" scrolling="no" ></iframe>
+			
+		</div>
+		<div class="content-bottom-r">
+			<img src="imgs/aboutus/关于我们（了解拓度）_13.png" />
+			<img src="imgs/aboutus/关于我们（了解拓度）_16.png" />
+		</div>
+	</div>
+</div>
+
+
+ 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src='js/script.js'></script>
+
+<script type="text/javascript">
+  //轮播
+  $(".slideBox").slide({
+	 mainCell: ".bd ul",
+	 effect: "leftLoop",
+	 vis: "auto",
+	 autoPlay: false,
+	 trigger: "mouseover"
+  });
+ 
+</script>
+</div>
+</body>
+</html>
